@@ -1,0 +1,118 @@
+!--[Title]--!
+
+URxvt*title                 : urxvt
+URxvt*termName              : rxvt-256color
+URxvt*cursorBlink           : true
+URxvt*urgentOnBell          : true
+
+! resize fonts
+URxvt.resize-font.smaller   : C-Down
+URxvt.resize-font.bigger    : C-Up
+
+! disable alt+shift event
+URxvt.iso14755              : false
+URxvt.iso14755_52           : false
+
+! disable copy-paste
+URxvt.keysym.C-M-c          : builtin-string:
+URxvt.keysym.C-M-v          : builtin-string:
+
+!--[URL Select]--!
+URxvt.perl-ext-common       : default,matcher,resize-font
+URxvt.url-launcher          : /usr/bin/firefox
+URxvt*underlineURLs         : true
+urxvt*matcher.Button        : 1
+URxvt.keysym.C-Delete       : perl:matcher:last
+URxvt.keysym.M-Delete       : perl:matcher:list
+URxvt.matcher.rend.0        : Uline Bold fg5
+URxvt.colorUL               : #4682B4
+
+!--[Fonts]--!
+
+! URxvt.font     : -*-terminus-*-*-*-*-12-*-*-*-*-*-*-u
+! URxvt.font     : -*-droid sans mono-*-*-*-*-14-*-*-*-*-*-*-u
+URxvt.font     : xft:xos4 Terminus:pixelsize=11
+URxvt.boldFont : xft:xos4 Terminus:pixelsize=11:style=Bold
+! URxvt.font      : -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso8859-5,xft:Source Code Pro,xft:PowerlineSymbols
+! URxvt.boldFont  : -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso8859-5:xft:Source Code Pro
+! URxvt.font     : xft:DeJavu Sans Mono:pixelsize=10
+! URxvt.boldFont : xft:DeJavu Sans Mono:pixelsize=10:style=Bold
+
+!URxvt.intensityStyles: false
+
+!--[Xft settings]--!
+! Xft.antialias: true
+! Xft.autohint: false
+! Xft.dpi: 96
+! Xft.hinting: false
+! Xft.hintstyle: hintfull
+! Xft.rgba: rgb
+
+URxvt*scrollBar         : false
+URxvt*skipBuiltinGlyphs : true
+
+!--[Urxvt Options]--!
+
+URxvt*loginShell     : true
+URxvt*saveLines      : 1000
+URxvt*borderless     : true
+URxvt*jumpScroll     : true
+URxvt*internalBorder : 0
+URxvt*cursorColor    : red3
+URxvt*cursorColor2   : #000000
+URxvt*underlineColor : #999999
+
+! terminal colors ----------------------------------------------------
+
+! URxvt*background : #000000
+! URxvt*foreground : #ffffff
+
+URxvt*background : #2B2B2B
+URxvt*foreground : #DEDEDE
+
+! URxvt*colorUL    : #86a2b0
+
+! ! black
+!  URxvt*color0    : #2E3436
+!  URxvt*color8    : #555753
+! ! ! red
+!  URxvt*color1    : #CC0000
+!  URxvt*color9    : #EF2929
+! ! ! green
+!  URxvt*color2    : #4E9A06
+!  URxvt*color10   : #8AE234
+! ! ! yellow
+!  URxvt*color3    : #C4A000
+!  URxvt*color11   : #FCE94F
+! ! ! blue
+   URxvt*color4    : #3465A4
+   URxvt*color12   : #729FCF
+! ! ! magenta
+!  URxvt*color5    : #75507B
+!  URxvt*color13   : #AD7FA8
+! ! ! cyan
+!  URxvt*color6    : #06989A
+!  URxvt*color14   : #34E2E2
+! ! ! white
+!  URxvt*color7    : #D3D7CF
+!  URxvt*color15   : #EEEEEC
+
+! Xcursor ------------------------------------------------------------
+! Xcursor.theme : Pulse-Glass
+! Xcursor.size  : 20
+
+! Fade the text by the given percentage when focus is lost; option -fade.
+ URxvt*fading: 20
+
+! True: scroll with scrollback buffer when tty receives new lines (i.e.  try to
+! show the same lines) and scrollTtyOutput is False; option -sw. False: do not
+! scroll with scrollback buffer when tty receives new
+ URxvt*scrollWithBuffer: true
+
+! Turn on/off secondary screen (default enabled).
+! URxvt*secondaryScreen: boolean
+
+! Turn on/off secondary screen scroll (default enabled). If this option is
+! enabled, scrolls on the secondary screen will change the scrollback buffer
+! and, when secondaryScreen is off, switching to/from the
+ URxvt*secondaryScroll: false

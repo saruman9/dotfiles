@@ -1,0 +1,32 @@
+[user]
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
+  email = {{ pass "info/home/email/main" }}
+  name = {{ pass "info/home/git/username" }}
+  signingkey = {{ pass "info/home/gpg-id" }}
+{{- else if eq .pc_loc "work" }}
+  email = {{ pass "info/work/email/main" }}
+  name =  {{ pass "info/work/git/username" }}
+  signingkey = {{ pass "info/work/gpg-id" }}
+[http]
+  sslverify = false
+{{- else if eq .pc_loc "other" }}
+  # email = EMAIL
+ 	# name =  USERNAME
+  # signingkey = GPG-ID
+{{ end }}
+[core]
+  editor = emacsclient -t -a=\\\"\\\"
+[commit]
+  gpgsign = true
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[pager]
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[push]
+  default = current

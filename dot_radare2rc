@@ -1,0 +1,6 @@
+eco darkda
+e scr.utf8 = true
+# e asm.describe = true
+e prj.files = true
+e prj.git = true
+e scr.utf8.curvy = true

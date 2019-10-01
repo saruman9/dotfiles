@@ -1,0 +1,8 @@
+[Unit]
+Description=PowerNotify
+
+[Service]
+ExecStart=/usr/local/bin/power-manager
+
+[Install]
+WantedBy=default.target
