@@ -1,3 +1,4 @@
+{{ if eq .pc_loc "laptop" -}}
 [Unit]
 Description=PowerNotify
 
@@ -6,3 +7,4 @@ ExecStart=/usr/local/bin/power-manager
 
 [Install]
 WantedBy=default.target
+{{ end }}
