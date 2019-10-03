@@ -1,3 +1,6 @@
-{{- $pc_loc := promptString "PC location (work, desktop, laptop, other)?" -}}
+{{- $pc_loc := promptString "PC location (work, desktop, laptop, other)" -}}
 [data]
-  pc_loc = "{{- $pc_loc -}}"
+pc_loc = "{{- $pc_loc -}}"
+
+color = "always"
+verbose = true
