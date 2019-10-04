@@ -1,3 +1,4 @@
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
 {
     "alt-speed-down": 1024,
     "alt-speed-enabled": false,
@@ -94,3 +95,4 @@
     "watch-dir": "/home/neo/Downloads/Torrents",
     "watch-dir-enabled": true
 }
+{{ end }}
