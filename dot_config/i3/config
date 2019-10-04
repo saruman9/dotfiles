@@ -276,13 +276,10 @@ mode "$mode_display" {
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+slash mode "$mode_display"
 
-#Wallpaper
-#exec --no-startup-id feh --bg-fill .wallpaper/Russia.jpg
-
-#Auto back
+# Auto back
 workspace_auto_back_and_forth yes
 
-#Bar
+# Bar
 bar {
     id                bar-0
     status_command    i3status
@@ -290,8 +287,7 @@ bar {
     mode              hide
     workspace_buttons yes
     tray_output       primary
-    #output           LVDS1
-    font              pango:DejaVu Sans Mono, FontAwesome 12px
+    font              pango:monospace, FontAwesome 12px
 
     colors {
         background #000000
@@ -303,27 +299,4 @@ bar {
         urgent_workspace   #ffffff #900000
     }
 }
-
-#bar {
-#   id          bar-1
-#   output          LVDS1
-#   status_command      /home/neo/.i3status.sh
-#   position        top
-#   mode            hide
-#   modifier        mod1
-#   workspace_buttons   no
-#   tray_output         none
-#
-#   font pango:Terminus 14px
-#
-#   colors {
-#       background #000000
-#       statusline #ffffff
-#
-#       focused_workspace  #ffffff #285577
-#       active_workspace   #ffffff #333333
-#       inactive_workspace #888888 #222222
-#       urgent_workspace   #ffffff #900000
-#   }
-#}
 bindsym $mod+Shift+t bar mode toggle
