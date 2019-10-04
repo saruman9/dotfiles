@@ -1,3 +1,4 @@
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
 [Unit]
 Description=MPD Scribbler
 Requires=mpd.service
@@ -8,3 +9,4 @@ ExecStart=/usr/bin/mpdscribble --no-daemon
 
 [Install]
 WantedBy=default.target
+{{ end }}
