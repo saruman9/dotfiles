@@ -109,6 +109,7 @@ guiset_quiet statuspanel left
 " Search engine
 "
 
+set searchurls.aur https://aur.archlinux.org/packages/?O=0&K=
 set searchurls.aw https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=
 set searchurls.bgg https://boardgamegeek.com/search/boardgame?q=
 set searchurls.cr https://crates.io/search?q=
@@ -127,6 +128,7 @@ set searchurls.k https://www.kinopoisk.ru/index.php?kp_query=
 set searchurls.osm https://www.openstreetmap.org/search?query=
 set searchurls.r https://rutracker.org/forum/tracker.php?o=10&s=2&nm=
 set searchurls.rd https://doc.rust-lang.org/std/index.html?search=
+set searchurls.rep https://repology.org/projects/?search=
 set searchurls.so http://stackoverflow.com/search?q=%s
 set searchurls.t https://twitter.com/search?q=%s
 set searchurls.tes https://tesera.ru/search?q=%s
@@ -138,7 +140,6 @@ set searchurls.ym https://yandex.ru/maps/?mode=search&text=
 set searchurls.ymar https://market.yandex.ru/search?text=
 set searchurls.yt https://www.youtube.com/results?search_query=
 set searchurls.ytr https://translate.yandex.ru/?text=
-set searchurls.aur https://aur.archlinux.org/packages/?O=0&K=
 
 " This will have to do until someone writes us a nice syntax file :)
 " vim: set filetype=vim:
