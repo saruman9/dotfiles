@@ -50,7 +50,7 @@ bind gd tabdetach
 bind gD composite tabduplicate | tabdetach
 
 " Make yy use canonical / short links on the 5 websites that support them
-bind yy clipboard yankshort
+" bind yy clipboard yankshort
 
 " Stupid workaround to let hint -; be used with composite which steals semi-colons
 command hint_focus hint -;
@@ -104,6 +104,41 @@ guiset_quiet tabs always
 guiset_quiet navbar none
 guiset_quiet hoverlink top-right
 guiset_quiet statuspanel left
+
+"
+" Search engine
+"
+
+set searchurls.aw https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=
+set searchurls.bgg https://boardgamegeek.com/search/boardgame?q=
+set searchurls.cr https://crates.io/search?q=
+set searchurls.ddg https://duckduckgo.com/?q=
+set searchurls.drs https://docs.rs/releases/search?query=
+set searchurls.g https://www.google.com/search?q=
+set searchurls.gh https://github.com/search?utf8=✓&q=
+set searchurls.gi https://www.google.com/search?tbm=isch&q=
+set searchurls.gm https://www.google.com/maps?q=
+set searchurls.google https://www.google.com/search?q=
+set searchurls.gt http://translate.google.com/?source=osdd#%s1|%s2|%s3
+set searchurls.gta http://translate.google.com/?source=osdd#auto|auto|
+set searchurls.gw https://wiki.gentoo.org/index.php?title=Special:Search&profile=default&fulltext=Search&search=
+set searchurls.im http://www.imdb.com/find?s=all&q=
+set searchurls.k https://www.kinopoisk.ru/index.php?kp_query=
+set searchurls.osm https://www.openstreetmap.org/search?query=
+set searchurls.r https://rutracker.org/forum/tracker.php?o=10&s=2&nm=
+set searchurls.rd https://doc.rust-lang.org/std/index.html?search=
+set searchurls.so http://stackoverflow.com/search?q=%s
+set searchurls.t https://twitter.com/search?q=%s
+set searchurls.tes https://tesera.ru/search?q=%s
+set searchurls.w https://en.wikipedia.org/wiki/Special:Search/
+set searchurls.wd https://ru.wiktionary.org/wiki/%s
+set searchurls.wo http://www.wolframalpha.com/input/?i=%s
+set searchurls.wru https://ru.wikipedia.org/wiki/Special:Search/
+set searchurls.ym https://yandex.ru/maps/?mode=search&text=
+set searchurls.ymar https://market.yandex.ru/search?text=
+set searchurls.yt https://www.youtube.com/results?search_query=
+set searchurls.ytr https://translate.yandex.ru/?text=
+set searchurls.aur https://aur.archlinux.org/packages/?O=0&K=
 
 " This will have to do until someone writes us a nice syntax file :)
 " vim: set filetype=vim:
