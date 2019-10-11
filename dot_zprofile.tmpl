@@ -21,13 +21,6 @@ fi
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
 
 #
-# Emacs
-#
-
-# alias emt='emacsclient -nc -a ""'
-# alias emc='emacsclient -t -a ""'
-
-#
 # Editors
 #
 
@@ -56,7 +49,7 @@ fi
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
-# Set the the list of directories that cd searches.
+# Set the list of directories that cd searches.
 # cdpath=(
 #   $cdpath
 # )
@@ -88,7 +81,6 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 # Set the default Less options.
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
 # Remove -X and -F (exit if the content fits on one screen) to enable it.
-# export LESS='-F -g -i -M -R -S -w -X -z-4'
 export LESS='-F -i -M -R -w -X -z-4'
 
 # Set the Less input preprocessor.
@@ -107,9 +99,4 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-
-#
-# Pacaur color
-#
-alias pacaur='pacaur --color=always'
 {{ end }}
