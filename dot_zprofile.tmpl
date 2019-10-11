@@ -1,0 +1,115 @@
+{{- if eq .prezto "y" -}}
+#
+# Executes commands at login pre-zshrc.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+#
+# Browser
+#
+
+if [[ "$OSTYPE" == darwin* ]]; then
+  export BROWSER='open'
+fi
+
+#
+# Qt interface
+#
+
+[ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
+
+#
+# Emacs
+#
+
+# alias emt='emacsclient -nc -a ""'
+# alias emc='emacsclient -t -a ""'
+
+#
+# Editors
+#
+
+export EDITOR='emc'
+export VISUAL='emc'
+export PAGER='less'
+
+#
+# Terminal
+#
+
+export TERMINAL='alacritty'
+
+#
+# Language
+#
+
+if [[ -z "$LANG" ]]; then
+  export LANG='en_US.UTF-8'
+fi
+
+#
+# Paths
+#
+
+# Ensure path arrays do not contain duplicates.
+typeset -gU cdpath fpath mailpath path
+
+# Set the the list of directories that cd searches.
+# cdpath=(
+#   $cdpath
+# )
+
+# Set the list of directories that Zsh searches for programs.
+path=(
+  /usr/local/{bin,sbin}
+  /usr/lib/jvm/default/bin
+  /usr/bin/site_perl
+  /usr/bin/vendor_perl
+  /usr/bin/core_perl
+  $NPM_PACKAGES/bin
+  $HOME/.node_modules/bin
+  $HOME/.cargo/bin
+  $HOME/.nimble/bin
+  $HOME/.local/bin
+  $path
+)
+
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+export MANPATH="$NPM_PACKAGES/share/man:$MANPATH"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
+#
+# Less
+#
+
+# Set the default Less options.
+# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
+# Remove -X and -F (exit if the content fits on one screen) to enable it.
+# export LESS='-F -g -i -M -R -S -w -X -z-4'
+export LESS='-F -i -M -R -w -X -z-4'
+
+# Set the Less input preprocessor.
+# Try both `lesspipe` and `lesspipe.sh` as either might exist on a system.
+if (( $#commands[(i)lesspipe(|.sh)] )); then
+  export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
+fi
+
+#
+# Temporary Files
+#
+
+if [[ ! -d "$TMPDIR" ]]; then
+  export TMPDIR="/tmp/$LOGNAME"
+  mkdir -p -m 700 "$TMPDIR"
+fi
+
+TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Pacaur color
+#
+alias pacaur='pacaur --color=always'
+{{ end }}

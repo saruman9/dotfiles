@@ -1,0 +1,8 @@
+#!/bin/env sh
+{{- if eq .prezto "y" }}
+echo -e "\e[0;32m[chezmoi] \e[0;31mInstalling Prezto...\e[0m"
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" && \
+    echo -e "\e[0;32m[chezmoi] \e[0;31mPrezto — OK!\e[0m"
+{{- else }}
+echo -e "\e[0;32m[chezmoi] \e[1;31mPrezto will not be installed.\e[0m"
+{{ end }}
