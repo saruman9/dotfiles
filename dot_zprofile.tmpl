@@ -35,6 +35,12 @@ export PAGER='less'
 export TERMINAL='alacritty'
 
 #
+# FZF
+#
+
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview' --bind 'ctrl-y:execute-silent(echo -n {2..} | xclip -selection clipboard)'"
+
+#
 # Language
 #
 
