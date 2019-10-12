@@ -1,0 +1,13 @@
+#!/bin/env sh
+source $(chezmoi source-path)/utilities.sh
+{{- if eq .prezto "y" }}
+zsh_dir="${ZDOTDIR:-$HOME}/.zprezto"
+zsh_contrib="${ZDOTDIR:-$HOME}/.zprezto-contrib"
+print_tag "chezmoi" "Installing Prezto..." "yellow"
+check_dir "$zsh_dir" "Prezto directory exist, please delete."
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "$zsh_dir" && \
+    print_tag "chezmoi" "Prezto — OK!" "green"
+mkdir -p "$zsh_contrib"
+{{- else }}
+print_tag "chezmoi" "Prezto will not be installed." "yellow"
+{{ end }}

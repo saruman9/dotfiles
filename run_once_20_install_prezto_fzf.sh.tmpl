@@ -1,0 +1,13 @@
+#!/bin/env sh
+source $(chezmoi source-path)/utilities.sh
+{{- if eq .prezto "y" }}
+zsh_dir="${ZDOTDIR:-$HOME}/.zprezto"
+zsh_contrib="${ZDOTDIR:-$HOME}/.zprezto-contrib"
+print_tag "chezmoi" "Installing fzf Prezto module..." "yellow"
+check_dir "$zsh_contrib/fzf" "fzf Prezto module directory exist, please delete."
+cd "$zsh_contrib"
+git clone --recursive https://gitlab.com/saruman9/fzf-prezto.git fzf && \
+    print_tag "chezmoi" "fzf Prezto module — OK!" "green"
+{{- else }}
+print_tag "chezmoi" "Prezto will not be installed." "yellow"
+{{ end }}
