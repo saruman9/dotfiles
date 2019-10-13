@@ -1,4 +1,5 @@
 #!/bin/env sh
+
 print_tag() {
     tag="$1"
     msg="$2"
@@ -19,6 +20,7 @@ print_tag() {
     esac
     echo -e "\e[0;33m[${tag}] \e[${color_code_0};${color_code_1}m${msg}\e[0m"
 }
+
 check_dir() {
     dir="$1"
     msg="$2"
