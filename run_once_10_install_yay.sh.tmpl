@@ -1,0 +1,19 @@
+#!/bin/env sh
+
+set -e
+
+source "$(chezmoi source-path)/utilities.sh"
+
+{{- if eq .chezmoi.osRelease.name "Arch Linux" }}
+
+print_tag "chezmoi" "Installing yay... (be prepare to input password)" "yellow"
+git clone https://aur.archlinux.org/yay.git /tmp/yay || true
+cd /tmp/yay
+makepkg -rsci --noconfirm
+print_tag "chezmoi" "yay — OK!" "green"
+
+{{- else }}
+
+print_tag "chezmoi" "You use not Arch Linux system, yay will not be installed." "yellow"
+
+{{ end }}
