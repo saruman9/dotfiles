@@ -1,0 +1,67 @@
+alsa-utils
+{{- if eq .pc_loc "desktop" }}
+amd-ucode
+{{- end }}
+aspell
+base
+base-devel
+bat
+bind-tools
+chezmoi-git
+cpio
+cups
+downgrade
+elinks
+emacs
+git
+networkmanager
+networkmanager-openvpn
+openssh
+terminus-cyrillic
+gvim
+wget
+zsh
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
+epson-inkjet-printer-escpr
+{{- end }}
+exa
+exfat-utils
+expac
+fd
+feh
+fzf
+git-lfs
+gnu-netcat
+htop
+i7z
+man-pages
+mpd
+mpdscribble
+ncdu
+ncmpcpp
+neomutt
+neovim
+nmap
+pass # TODO: Install early
+peerflix # TODO: Find another tool
+pkgfile
+ripgrep
+rsync
+rxvt # TODO: Temp solution for ssh
+rxvt-unicode-patched
+scrot
+telegram-cli-git # TODO: Use CLI or EMACS version
+terminus-cyrillic
+time
+toxic
+translate-shell
+tremc-git
+transmission-cli
+udisks2 # TODO: Use systemd
+unrar-free
+vifm
+wget
+windscribe-cli
+wine
+winetricks
+yay
