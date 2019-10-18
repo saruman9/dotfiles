@@ -140,6 +140,7 @@ set searchurls.ym https://yandex.ru/maps/?mode=search&text=
 set searchurls.ymar https://market.yandex.ru/search?text=
 set searchurls.yt https://www.youtube.com/results?search_query=
 set searchurls.ytr https://translate.yandex.ru/?text=
+set searchurls.pd https://docs.python.org/3/search.html?q=
 
 " This will have to do until someone writes us a nice syntax file :)
 " vim: set filetype=vim:
