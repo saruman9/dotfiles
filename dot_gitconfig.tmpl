@@ -1,4 +1,5 @@
 [user]
+{{- if eq .pass "y" }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
   email = {{ pass "info/home/email/main" }}
   name = {{ pass "info/home/git/username" }}
@@ -14,6 +15,7 @@
  	# name =  USERNAME
   # signingkey = GPG-ID
 {{ end }}
+{{- end }}
 [core]
   editor = emacsclient -t -a=\\\"\\\"
 [commit]

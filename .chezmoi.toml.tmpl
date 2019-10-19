@@ -1,11 +1,13 @@
 {{- $pc_loc := promptString "PC location (work, desktop, laptop, other)" -}}
 {{- $prezto := promptString "Install Prezto (y/n)" -}}
+{{- $pass := promptString "pass installed (y/n)" -}}
 verbose = true
 color = "on"
 
 [data]
 pc_loc = "{{- $pc_loc -}}"
 prezto = "{{- $prezto -}}"
+pass = "{{- $pass -}}"
 
 [gpg]
 recipient = "27B49A4ADC4B469DC8F2BDD91769FEA6B860FF90"

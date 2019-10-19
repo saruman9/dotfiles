@@ -32,8 +32,8 @@ verbose = 2
 
 [last.fm]
 url = http://post.audioscrobbler.com/
-username = {{ pass "last.fm/username" }}
-password = {{ pass "last.fm/pass" }}
+username = {{ if eq .pass "y" }}{{ pass "last.fm/username" }}{{ end }}
+password = {{ if eq .pass "y" }}{{ pass "last.fm/pass" }}{{ end }}
 # The file where mpdscribble should store its Last.fm journal in case
 # you do not have a connection to the Last.fm server.
 journal = /var/cache/mpdscribble/lastfm.journal

@@ -55,7 +55,7 @@
     "rpc-enabled": true,
     "rpc-host-whitelist": "",
     "rpc-host-whitelist-enabled": true,
-    "rpc-password": "{{ pass "info/home/transmission/rpc-password" }}",
+    "rpc-password": "{{ if eq .pass "y" }}{{ pass "info/home/transmission/rpc-password" }}{{ end }}",
     "rpc-port": 9091,
     "rpc-url": "/transmission/",
     "rpc-username": "",
