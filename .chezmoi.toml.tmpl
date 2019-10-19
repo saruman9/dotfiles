@@ -11,3 +11,8 @@ pass = "{{- $pass -}}"
 
 [gpg]
 recipient = "27B49A4ADC4B469DC8F2BDD91769FEA6B860FF90"
+
+{{ if eq $pass "y" -}}
+[genericSecret]
+command = "pass"
+{{ end -}}

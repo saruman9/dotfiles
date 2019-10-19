@@ -1,0 +1,7 @@
+{{- if eq .pc_loc "laptop" -}}
+{{- toString (secret "home/laptop/ssh/id_rsa") }}
+{{ else if eq .pc_loc "desktop" -}}
+{{- toString (secret "home/desktop/ssh/id_rsa") }}
+{{ else if eq .pc_loc "work" -}}
+{{- toString (secret "work/ssh/id_rsa") }}
+{{ end -}}
