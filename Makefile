@@ -1,13 +1,17 @@
+# Don't use `rm` program
+
 ZDOTDIR := $(if $(ZDOTDIR),$(ZDOTDIR),$(HOME))
 PACKAGES_DIR := $(HOME)/.local/share/packages
+
 PREZTO := $(ZDOTDIR)/.zprezto
 FZF := $(ZDOTDIR)/.zprezto-contrib/fzf
-YAY := $(shell which yay)
+YAY := /bin/yay
+
 YAY_COMMAND := yay -Sy --needed --norebuild --noconfirm \
 	$$(cat $(PACKAGES_DIR)/base.list | sed 's/ \#.*$$//g')
 
 
-.PHONY: all
+.PHONY: all update install
 all: update
 
 update: update_prezto update_chezmoi
