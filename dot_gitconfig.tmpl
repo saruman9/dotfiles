@@ -1,13 +1,13 @@
 [user]
 {{- if eq .pass "y" }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
-  email = {{ pass "info/home/email/main" }}
-  name = {{ pass "info/home/git/username" }}
-  signingkey = {{ pass "info/home/gpg-id" }}
+  email = {{ pass "home/email/main" }}
+  name = {{ pass "home/git/username" }}
+  signingkey = {{ pass "home/gpg-id" }}
 {{- else if eq .pc_loc "work" }}
-  email = {{ pass "info/work/email/main" }}
-  name =  {{ pass "info/work/git/username" }}
-  signingkey = {{ pass "info/work/gpg-id" }}
+  email = {{ pass "work/email/main" }}
+  name =  {{ pass "work/git/username" }}
+  signingkey = {{ pass "work/gpg-id" }}
 [http]
   sslverify = false
 {{- else if eq .pc_loc "other" }}
