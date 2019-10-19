@@ -17,7 +17,7 @@ all: update
 update: update_prezto update_chezmoi
 
 update_chezmoi:
-	chezmoi apply
+	chezmoi apply --verbose
 
 update_prezto:
 	cd $(ZDOTDIR)/.zprezto && \
@@ -28,17 +28,18 @@ install: $(PREZTO) $(FZF) $(YAY) install_packages
 
 $(PREZTO) install_prezto:
 	git clone --recursive \
-		https://github.com/sorin-ionescu/prezto.git $(ZDOTDIR)/.zprezto
+		https://github.com/sorin-ionescu/prezto.git $(ZDOTDIR)/.zprezto || true
 
 $(YAY) install_yay:
-	git clone https://aur.archlinux.org/yay.git /tmp/yay
+	git clone https://aur.archlinux.org/yay.git /tmp/yay || true
 	cd /tmp/yay && \
 	makepkg -rsci --noconfirm
 
 $(FZF) install_fzf:
 	mkdir $(ZDOTDIR)/.zprezto-contrib
 	git clone --recursive \
-		https://gitlab.com/saruman9/fzf-prezto.git $(ZDOTDIR)/.zprezto-contrib/fzf
+		https://gitlab.com/saruman9/fzf-prezto.git $(ZDOTDIR)/.zprezto-contrib/fzf \
+	|| true
 
 install_packages: $(YAY) update_chezmoi install_packages_base \
 	install_packages_desktop install_packages_developing \
