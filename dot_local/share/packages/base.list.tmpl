@@ -1,7 +1,4 @@
 alsa-utils
-{{- if eq .pc_loc "desktop" }}
-amd-ucode
-{{- end }}
 aspell
 base
 base-devel
@@ -13,25 +10,16 @@ cups
 downgrade
 elinks
 emacs
-git
-networkmanager
-networkmanager-openvpn
-openssh
-terminus-cyrillic
-gvim
-wget
-zsh
-{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
-epson-inkjet-printer-escpr
-{{- end }}
 exa
 exfat-utils
 expac
 fd
 feh
 fzf
+git
 git-lfs
 gnu-netcat
+gvim
 htop
 i7z
 man-pages
@@ -41,7 +29,10 @@ ncdu
 ncmpcpp
 neomutt
 neovim
+networkmanager
+networkmanager-openvpn
 nmap
+openssh
 pass # TODO: Install early
 peerflix # TODO: Find another tool
 pkgfile
@@ -55,8 +46,8 @@ terminus-cyrillic
 time
 toxic
 translate-shell
-tremc-git
 transmission-cli
+tremc-git
 udisks2 # TODO: Use systemd
 unrar-free
 vifm
@@ -65,3 +56,10 @@ windscribe-cli
 wine
 winetricks
 yay
+zsh
+{{- if eq .pc_loc "desktop" }}
+amd-ucode
+{{- end }}
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
+epson-inkjet-printer-escpr
+{{- end }}
