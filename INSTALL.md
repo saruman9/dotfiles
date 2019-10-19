@@ -218,7 +218,7 @@
 1. Start NetworkManager service:
 
   ```
-  $ sudo systemctl start NetworkManager
+  $ systemctl --now enable NetworkManager
   ```
 
 1. Configure pass:
