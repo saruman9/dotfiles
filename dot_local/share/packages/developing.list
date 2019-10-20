@@ -1,12 +1,23 @@
+asciidoctor
+astyle
 ctags
 diff-so-fancy
 eclipse-java
 flake8
 flamegraph
 global
+gnuplot
 gradle
+inotify-tools
 intellij-idea-community-edition
+ipython
+ltrace-git
 namcap
 perf
+pygmentize
+python-pipenv
 rust-racer # TODO: Install from rustup
 rustup
+sqlitebrowser
+strace
+valgrind

@@ -7,7 +7,9 @@ bind-tools
 chezmoi-git
 cpio
 cups
+dhclient
 downgrade
+efibootmgr
 elinks
 emacs
 exa
@@ -19,46 +21,79 @@ fzf
 git
 git-lfs
 gnu-netcat
+grub
 gvim
 htop
+hunspell-ru-aot # TODO: Replace by other
+hyphen-en
+hyphen-ru
 i7z
+linux-headers
+lsof
 man-pages
+mlocate
+mpc
 mpd
 mpdscribble
+mpv
 ncdu
 ncmpcpp
 neomutt
 neovim
+net-tools
 networkmanager
 networkmanager-openvpn
 nmap
+ntfs-3g
+ntp
 openssh
+p7zip
+pacutils
+pamixer
 pass # TODO: Install early
+pdftk
 peerflix # TODO: Find another tool
 pkgfile
+pulseaudio
+pulseaudio-alsa
+pv
+qemu-arch-extra
 ripgrep
 rsync
 rxvt # TODO: Temp solution for ssh
 rxvt-unicode-patched
+samba
 scrot
+sshfs
+sysstat
 telegram-cli-git # TODO: Use CLI or EMACS version
 terminus-cyrillic
 time
+tmux
+torsocks
 toxic
 translate-shell
 transmission-cli
 tremc-git
 udisks2 # TODO: Use systemd
 unrar-free
+vbetool
 vifm
 wget
 windscribe-cli
 wine
 winetricks
+xclip
 yay
+zip
 zsh
 {{- if eq .pc_loc "desktop" }}
 amd-ucode
+{{- end }}
+{{- if eq .pc_loc "laptop" }}
+intel-ucode
+laptop-mode-tools
+powertop
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
 epson-inkjet-printer-escpr

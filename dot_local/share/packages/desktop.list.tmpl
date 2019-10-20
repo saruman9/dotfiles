@@ -2,33 +2,52 @@
 adwaita-qt
 alacritty-git
 alacritty-terminfo-git
+awesome-terminal-fonts
 chromium
 dmenu
 dropbox
 dunst
 evince
 firefox
+gimp
 gnome-themes-extra
 guvcview
+i3-wm
+i3lock
+i3status
 libreoffice-fresh
 lxappearance
 nerd-fonts-hack
+network-manager-applet
+noto-fonts
 pavucontrol
 qt5ct
 redshift # TODO: Create config
 speedcrunch
 telegram-desktop
+tigervnc
 tor-browser
+ttf-ms-fonts
+wine
+xdotool
 xf86-input-keyboard
 xf86-input-mouse
+xorg
+xorg-xinit
 xsane
 xss-lock
 ynab4
+zathura
+zathura-djvu
+zathura-pdf-mupdf
+zathura-ps
 {{- if eq .pc_loc "desktop" }}
 xf86-video-amdgpu
 {{- end }}
 {{- if eq .pc_loc "laptop" }}
+xf86-input-synaptics
 xf86-video-intel
 xf86-video-nouveau
+xorg-xbacklight
 {{- end }}
 {{- end }}

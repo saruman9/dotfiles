@@ -8,3 +8,7 @@ diffoscope
 dmidecode
 ghidra-git
 httpie
+mitmproxy
+pwndbg
+tcpdump
+wireshark-qt
