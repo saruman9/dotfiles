@@ -195,6 +195,15 @@
   # chsh -s /bin/zsh
   ```
 
+1. Uncomment `multilib` repository.
+
+  ```
+  $ sudoedit /etc/pacman.conf
+
+  [multilib]
+  Include = /etc/pacman.d/mirrorlist
+  ```
+
 1. Create a user:
 
   ```
@@ -224,7 +233,7 @@
 1. Configure pass:
 
   ```
-  $ pass git clone GIT_REPOSITORY
+  $ git clone GIT_REPOSITORY ~/.password-store
   ```
 
 1. Setup dotfiles:
@@ -239,6 +248,8 @@
   $ chezmoi cd
   $ make install
   ```
+
+  While installing packages may be errors of GPG, Git and others, fix it and continue installing.
 
 1. Configure fwupdmgr:
 
