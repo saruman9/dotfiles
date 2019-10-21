@@ -1,4 +1,3 @@
-{{- if eq .prezto "y" -}}
 #
 # Executes commands at logout.
 #
@@ -18,4 +17,3 @@ SAYINGS=(
 echo $SAYINGS[$(($RANDOM % ${#SAYINGS} + 1))]
 
 } >&2
-{{ end }}
