@@ -35,7 +35,7 @@ update_spacemacs:
 	git fetch && \
 	git reset --hard origin/master
 
-install: $(PREZTO) $(FZF) $(YAY) install_packages $(SPACEMACS)
+install: $(PREZTO) $(FZF) $(YAY) update_dotfiles remove_conflicts install_packages $(SPACEMACS)
 
 $(PREZTO) install_prezto:
 	git clone --recursive \
@@ -52,7 +52,10 @@ $(FZF) install_fzf:
 	https://gitlab.com/saruman9/fzf-prezto.git $(ZDOTDIR)/.zprezto-contrib/fzf \
 	|| true
 
-install_packages: $(YAY) update_dotfiles install_packages_base \
+remove_conflicts:
+	yay -Rscn --noconfirm chezmoi terminus-font vim || true
+
+install_packages: $(YAY) install_packages_base \
 	install_packages_desktop install_packages_developing \
 	install_packages_latex install_packages_mobile install_packages_re
 
