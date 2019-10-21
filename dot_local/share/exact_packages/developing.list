@@ -1,7 +1,9 @@
 asciidoctor
 astyle
+clang
 ctags
 diff-so-fancy
+docker-compose
 eclipse-java
 flake8
 flamegraph
@@ -11,13 +13,19 @@ gradle
 inotify-tools
 intellij-idea-community-edition
 ipython
+jdk-openjdk
+jre-openjdk
 ltrace-git
+mypy
 namcap
 perf
 pygmentize
 python-pipenv
+python-pylint
 rust-racer # TODO: Install from rustup
 rustup
 sqlitebrowser
 strace
+tokei
 valgrind
+yapf

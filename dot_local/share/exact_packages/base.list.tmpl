@@ -5,6 +5,7 @@ base-devel
 bat
 bind-tools
 chezmoi-git
+colordiff
 cpio
 cups
 dhclient
@@ -28,6 +29,9 @@ hunspell-ru-aot # TODO: Replace by other
 hyphen-en
 hyphen-ru
 i7z
+jq
+less
+linux
 linux-headers
 lsof
 man-pages
@@ -47,6 +51,7 @@ nmap
 ntfs-3g
 ntp
 openssh
+openvpn
 p7zip
 pacutils
 pamixer
@@ -60,8 +65,7 @@ pv
 qemu-arch-extra
 ripgrep
 rsync
-rxvt # TODO: Temp solution for ssh
-rxvt-unicode-patched
+rxvt-unicode-patched # TODO: Temp solution for ssh
 samba
 scrot
 sshfs
@@ -76,25 +80,27 @@ translate-shell
 transmission-cli
 tremc-git
 udisks2 # TODO: Use systemd
+unrar
 unrar-free
 vbetool
 vifm
 wget
 windscribe-cli
-wine
-winetricks
 xclip
 yay
+youtube-dl
 zip
 zsh
 {{- if eq .pc_loc "desktop" }}
 amd-ucode
 {{- end }}
 {{- if eq .pc_loc "laptop" }}
-intel-ucode
 laptop-mode-tools
 powertop
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
 epson-inkjet-printer-escpr
+{{- end }}
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "work") }}
+intel-ucode
 {{- end }}
