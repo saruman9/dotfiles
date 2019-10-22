@@ -31,9 +31,9 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     javascript
      html
      csv
-     ;; javascript
      nim
      haskell
      asciidoc
@@ -43,10 +43,7 @@ values."
             c-c++-enable-clang-support t)
      (gtags :variables
             gtags-enable-by-default nil)
-     ;; csv
-     ;; javascript
-     ;; html
-     ;; vimscript
+     vimscript
      yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -59,7 +56,6 @@ values."
      emacs-lisp
      git
      markdown
-     ;; python
      (latex :variables
             latex-build-command "LatexMk"
             latex-enable-auto-fill t)
