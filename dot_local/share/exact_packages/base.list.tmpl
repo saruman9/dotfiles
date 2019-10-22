@@ -36,12 +36,7 @@ linux-headers
 lsof
 man-pages
 mlocate
-mpc
-mpd
-mpdscribble
-mpv
 ncdu
-ncmpcpp
 neomutt
 neovim
 net-tools
@@ -57,7 +52,6 @@ pacutils
 pamixer
 pass # TODO: Install early
 pdftk
-peerflix # TODO: Find another tool
 pkgfile
 pulseaudio
 pulseaudio-alsa
@@ -75,10 +69,7 @@ terminus-cyrillic
 time
 tmux
 torsocks
-toxic
 translate-shell
-transmission-cli
-tremc-git
 udisks2 # TODO: Use systemd
 unrar
 unrar-free
@@ -88,7 +79,6 @@ wget
 windscribe-cli
 xclip
 yay
-youtube-dl
 zip
 zsh
 {{- if eq .pc_loc "desktop" }}
@@ -100,6 +90,16 @@ powertop
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
 epson-inkjet-printer-escpr
+mpc
+mpd
+mpdscribble
+mpv
+ncmpcpp
+peerflix # TODO: Find another tool
+toxic
+transmission-cli
+tremc-git
+youtube-dl
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "work") }}
 intel-ucode
