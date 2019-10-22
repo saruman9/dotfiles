@@ -7,7 +7,6 @@ capstone
 checksec
 diffoscope
 dmidecode
-ghidra-git
 httpie
 jd-gui-bin
 llvm
