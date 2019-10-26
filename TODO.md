@@ -1,8 +1,9 @@
 - fix xmodmap
 - music on bar
 - fix dpi
-- helper for all
+- helper for all (rofi)
 - language tool
 - spacevim
 - stardict
 - clean and replace packages, add work's packages
+- charpicker as package
