@@ -1,25 +1,51 @@
-{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") -}}
 set imap_user   = `pass google.com/mail/main/username`
 set imap_pass   = `pass google.com/mail/main/pass`
 set realname    = '`pass google.com/mail/main/realname`'
 set from        = `pass google.com/mail/main/username`
 set pgp_sign_as = `pass home/gpg-id`
+
 # Specify where to save and/or look for postponed messages.
 set postponed   = +[Gmail]/Drafts
+set folder    = imaps://imap.gmail.com/
+mailboxes     = INBOX
+
+set smtp_url      = smtps://$imap_user:$imap_pass@smtp.gmail.com
+
+set record=""
+{{- else if eq .pc_loc "work" -}}
+set imap_user   = `pass work/imap.dsec.ru/username`
+set imap_pass   = `pass work/imap.dsec.ru/pass`
+set realname    = '`pass work/imap.dsec.ru/realname`'
+set from        = `pass work/imap.dsec.ru/username`
+set pgp_sign_as = `pass work/gpg-id`
+
+# Specify where to save and/or look for postponed messages.
+set folder=imaps://imap.dsec.ru/
+set hostname="dsec.ru"
+mailboxes =INBOX =Spam
+
+my_hdr Bcc: `pass work/imap.dsec.ru/username`
+
+set smtp_url = smtp://$imap_user:$imap_pass@smtp.dsec.ru:587
+
+set ssl_verify_host = no
+set ssl_verify_dates = no
+set ssl_starttls = yes
+
+set signature="~/.mutt/signature"
+
+unset record
 {{- end }}
 
-set folder    = imaps://imap.gmail.com/
 set spoolfile	= +INBOX
-mailboxes     = INBOX
 set imap_check_subscribed
 
 set use_from = yes
 
-set smtp_url      = smtps://$imap_user:$imap_pass@smtp.gmail.com
 set ssl_force_tls	= yes
 
 set tmpdir        =/tmp		# where to store temp files
-set record=""
 
 set copy=ask-yes
 set abort_unmodified = no
