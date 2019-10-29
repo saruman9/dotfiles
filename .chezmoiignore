@@ -45,6 +45,7 @@
 .sane
 .viminfo
 .wget-hsts
+.wine
 .ynab4
 .zcompdump
 .zcompdump.zwc
