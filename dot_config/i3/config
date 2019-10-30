@@ -199,9 +199,10 @@ bindsym Mod3+Left exec mpc prev
 bindsym Mod3+Right exec mpc next
 
 # ScreenShot
-bindsym Print exec scrot ~/tmp/full_$(date +%F_%H%M%S_%N).png
-bindsym Control+Print exec sleep 0.2 && scrot -s ~/tmp/part_$(date +%F_%H%M%S_%N).png
-bindsym $mod+Print exec sleep 0.2 && scrot -u ~/tmp/focus_$(date +%F_%H%M%S_%N).png
+bindsym Print exec flameshot gui
+bindsym Control+Print exec flameshot gui --delay 3000
+bindsym Shift+Print exec flameshot full --path ~/Downloads
+bindsym Control+Shift+Print exec flameshot full --clipboard
 
 #Shutdown
 set $Locker loginctl lock-session && sleep 1
