@@ -1,7 +1,7 @@
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") -}}
 set imap_user   = `pass google.com/mail/main/username`
 set imap_pass   = `pass google.com/mail/main/pass`
-set realname    = '`pass google.com/mail/main/realname`'
+set realname    = "{{ pass "google.com/mail/main/realname" }}"
 set from        = `pass google.com/mail/main/username`
 set pgp_sign_as = `pass home/gpg-id`
 
@@ -16,7 +16,7 @@ set record=""
 {{- else if eq .pc_loc "work" -}}
 set imap_user   = `pass work/imap.dsec.ru/username`
 set imap_pass   = `pass work/imap.dsec.ru/pass`
-set realname    = '`pass work/imap.dsec.ru/realname`'
+set realname    = "{{ pass "work/imap.dsec.ru/realname" }}"
 set from        = `pass work/imap.dsec.ru/username`
 set pgp_sign_as = `pass work/gpg-id`
 
