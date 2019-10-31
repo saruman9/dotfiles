@@ -6,13 +6,13 @@
   signingkey = {{ pass "home/gpg-id" }}
 {{- else if eq .pc_loc "work" }}
   email = {{ pass "work/email/main" }}
-  name =  {{ pass "work/git/username" }}
+  name = {{ pass "work/git/username" }}
   signingkey = {{ pass "work/gpg-id" }}
 [http]
   sslverify = false
 {{- else if eq .pc_loc "other" }}
   # email = EMAIL
- 	# name =  USERNAME
+  # name =  USERNAME
   # signingkey = GPG-ID
 {{ end }}
 {{- end }}
