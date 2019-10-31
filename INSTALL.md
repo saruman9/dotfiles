@@ -242,7 +242,7 @@
   $ chezmoi init THIS_GIT_REPOSITORY
   ```
 
-1. Install packages and plugins:
+1. Install packages and plugins (needed resolve package conflicts):
 
   ```
   $ chezmoi cd
