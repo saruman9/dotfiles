@@ -244,19 +244,6 @@ bindsym $mod+t exec trans-notify.sh
 # charpicker
 bindsym $mod+i exec /home/neo/Repos/charpicker/charpicker.sh
 
-#Names of Workspace
-# workspace 1 output VGA-1
-# workspace 2 output VGA-1
-# workspace 3 output VGA-1
-# workspace 4 output VGA-1
-# workspace 5 output HDMI-1
-# workspace 6 output HDMI-1
-# workspace 7 output HDMI-1
-# workspace 8 output HDMI-1
-# workspace 9 output HDMI-1
-# workspace 10 output HDMI-1
-# workspace "Work" output HDMI-1
-
 ## Manual management of external displays
 exec --no-startup-id xrandr --output HDMI-1 --auto --left-of VGA-1
 # Set the shortcuts and what they do
