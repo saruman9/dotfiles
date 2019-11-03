@@ -31,8 +31,7 @@ export PAGER='less'
 # Terminal
 #
 
-export TERMINAL='alacritty'
-alias ssh='TERM=xterm-256color \ssh'
+export TERMINAL='kitty'
 
 #
 # FZF
