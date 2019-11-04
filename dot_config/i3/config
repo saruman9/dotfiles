@@ -182,14 +182,14 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
 # Audio Volume
-set $refresh_i3status killall -SIGUSR1 i3status
+set $refresh_i3status killall -SIGUSR1 py3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-bindsym Mod3+KP_Up exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym Mod3+KP_Down exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym Mod3+KP_Begin exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym Mod3+KP_Up exec --no-startup-id change_volume.sh '+5' && py3-cmd refresh volume_status
+bindsym Mod3+KP_Down exec --no-startup-id change_volume.sh '-5' && py3-cmd refresh volume_status
+bindsym Mod3+KP_Begin exec --no-startup-id change_volume.sh 'mute' && py3-cmd refresh volume_status
 
 # Touchpad toggle
 bindsym XF86TouchpadToggle exec synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
@@ -303,11 +303,12 @@ bar {
     urgent_workspace   $color_bright_yellow   $color_bright_yellow    $color_normal_black
   }
 
-  id                bar-0
-  status_command    i3status
-  position          bottom
-  mode              hide
-  workspace_buttons yes
-  tray_output       primary
-  font              pango:monospace, FontAwesome 12px
+  id                      bar-0
+  status_command          py3status --dbus-notify
+  position                bottom
+  mode                    hide
+  workspace_buttons       yes
+  strip_workspace_numbers yes
+  tray_output             primary
+  font                    pango:monospace, FontAwesome 12px
 }
