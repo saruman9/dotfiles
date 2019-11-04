@@ -271,24 +271,43 @@ bindsym $mod+slash mode "$mode_display"
 # Auto back
 workspace_auto_back_and_forth yes
 
+# Color scheme (Gruvbox dark)
+set $color_normal_white  #a89984
+set $color_bright_white  #ebdbb2
+set $color_normal_gray   #222222
+set $color_bright_gray   #3c3836
+set $color_bright_yellow #d79921
+set $color_normal_black  #282828
+set $color_unused        #ff0000
+
+# Colors                  border                 background             text                   indicator       child_border
+client.focused            $color_bright_gray     $color_bright_gray     $color_bright_white    $color_unused   $color_normal_white
+client.focused_inactive   $color_bright_gray     $color_bright_gray     $color_bright_white    $color_unused   $color_normal_black
+client.unfocused          $color_normal_gray     $color_normal_gray     $color_normal_white    $color_unused   $color_normal_black
+client.urgent             $color_bright_yellow   $color_bright_yellow   $color_normal_black    $color_unused   $color_unused
+client.placeholder        $color_unused          $color_normal_black    $color_unused          $color_unused   $color_unused
+
 # Bar
-bar {
-    id                bar-0
-    status_command    i3status
-    position          bottom
-    mode              hide
-    workspace_buttons yes
-    tray_output       primary
-    font              pango:monospace, FontAwesome 12px
-
-    colors {
-        background #000000
-        statusline #ffffff
-
-        focused_workspace  #ffffff #285577
-        active_workspace   #ffffff #333333
-        inactive_workspace #888888 #222222
-        urgent_workspace   #ffffff #900000
-    }
-}
 bindsym $mod+Shift+t bar mode toggle
+bar {
+  colors {
+    # Whole color settings
+    background $color_normal_gray
+    separator  $color_bright_gray
+    statusline $color_bright_white
+
+    # Type             border                 background              font
+    focused_workspace  $color_bright_gray     $color_bright_gray      $color_bright_white
+    active_workspace   $color_unused          $color_unused           $color_unused
+    inactive_workspace $color_normal_gray     $color_normal_gray      $color_normal_white
+    urgent_workspace   $color_bright_yellow   $color_bright_yellow    $color_normal_black
+  }
+
+  id                bar-0
+  status_command    i3status
+  position          bottom
+  mode              hide
+  workspace_buttons yes
+  tray_output       primary
+  font              pango:monospace, FontAwesome 12px
+}
