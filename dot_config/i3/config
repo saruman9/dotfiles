@@ -170,9 +170,13 @@ bindsym $mod+r mode "resize"
 new_window normal
 hide_edge_borders smart
 
-#AutoStart
+# AutoStart
 exec setxkbmap -layout us,ru -variant ,winkeys \
 -option grp:alt_caps_toggle,grp_led:scroll,terminate:ctrl_alt_bksp,ctrl:ralt_rctrl,ctrl:rctrl_ralt
+exec xmodmap ~/.Xmodmap
+exec xset dpms 0 0 0
+exec xset -dpms
+exec xset s off
 
 # Brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
