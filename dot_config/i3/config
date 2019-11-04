@@ -236,7 +236,8 @@ bindsym $mod+grave scratchpad show
 bindsym $mod+F1 [title="SpeedCrunch"] scratchpad show
 bindsym $mod+F2 [title="Telegram"] scratchpad show
 
-# Telegram
+# Specific window configuration
+for_window [window_role="pop-up"] floating enable
 for_window [title="Telegram"] sticky enable
 for_window [title="Telegram"] resize set 454 572
 for_window [title="Telegram"] floating enable
