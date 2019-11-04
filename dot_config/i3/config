@@ -95,8 +95,8 @@ bindsym $mod+a focus parent
 # bindsym $mod+d focus child
 
 # workspaces name's
-set $ws1 "1"
-set $ws2 "2"
+set $ws1 "1: "
+set $ws2 "2: "
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -167,7 +167,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-new_window normal
 hide_edge_borders smart
 
 # AutoStart
