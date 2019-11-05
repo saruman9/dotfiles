@@ -89,6 +89,9 @@ amd-ucode
 laptop-mode-tools
 powertop
 {{- end }}
+{{- if eq .pc_loc "work" }}
+kyocera-cups
+{{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
 epson-inkjet-printer-escpr
 mpc

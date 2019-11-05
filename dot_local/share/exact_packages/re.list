@@ -11,8 +11,11 @@ httpie
 jd-gui-bin
 llvm
 mitmproxy
+pbtk-git
 peda
 pwndbg
+radare2-git
+ripgrep-all
 saleae-logic
 scapy
 spice-guest-tools-windows
