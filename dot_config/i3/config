@@ -271,38 +271,9 @@ bindsym $mod+slash mode "$mode_display"
 # Auto back
 workspace_auto_back_and_forth yes
 
-# Color scheme (Gruvbox dark)
-set $color_normal_white  #a89984
-set $color_bright_white  #ebdbb2
-set $color_normal_gray   #222222
-set $color_bright_gray   #3c3836
-set $color_bright_yellow #d79921
-set $color_normal_black  #282828
-set $color_unused        #ff0000
-
-# Colors                  border                 background             text                   indicator       child_border
-client.focused            $color_bright_gray     $color_bright_gray     $color_bright_white    $color_unused   $color_normal_white
-client.focused_inactive   $color_bright_gray     $color_bright_gray     $color_bright_white    $color_unused   $color_normal_black
-client.unfocused          $color_normal_gray     $color_normal_gray     $color_normal_white    $color_unused   $color_normal_black
-client.urgent             $color_bright_yellow   $color_bright_yellow   $color_normal_black    $color_unused   $color_unused
-client.placeholder        $color_unused          $color_normal_black    $color_unused          $color_unused   $color_unused
-
 # Bar
 bindsym $mod+Shift+t bar mode toggle
 bar {
-  colors {
-    # Whole color settings
-    background $color_normal_gray
-    separator  $color_bright_gray
-    statusline $color_bright_white
-
-    # Type             border                 background              font
-    focused_workspace  $color_bright_gray     $color_bright_gray      $color_bright_white
-    active_workspace   $color_unused          $color_unused           $color_unused
-    inactive_workspace $color_normal_gray     $color_normal_gray      $color_normal_white
-    urgent_workspace   $color_bright_yellow   $color_bright_yellow    $color_normal_black
-  }
-
   id                      bar-0
   status_command          py3status --dbus-notify
   position                bottom
