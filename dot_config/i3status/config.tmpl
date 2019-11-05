@@ -12,7 +12,9 @@ general {
 }
 
 # order += "disk /"
+{{ if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") -}}
 order += "mpd_status"
+{{ end -}}
 order += "arch_updates"
 order += "disk /home"
 order += "ipv6"
