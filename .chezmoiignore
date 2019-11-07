@@ -43,6 +43,7 @@
 .password-store
 .rustup
 .sane
+.tmux
 .viminfo
 .wget-hsts
 .wine

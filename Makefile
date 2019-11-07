@@ -5,6 +5,7 @@ PACKAGES_DIR := $(HOME)/.local/share/packages
 
 PREZTO := $(ZDOTDIR)/.zprezto
 FZF := $(ZDOTDIR)/.zprezto-contrib/fzf
+TPM := $(HOME)/.tmux/plugins/tpm
 YAY := /bin/yay
 SPACEMACS := $(HOME)/.emacs.d
 
@@ -35,7 +36,8 @@ update_spacemacs:
 	git fetch && \
 	git reset --hard origin/master
 
-install: $(PREZTO) $(FZF) $(YAY) update_dotfiles install_packages $(SPACEMACS)
+install: $(PREZTO) $(FZF) $(TPM) $(YAY) update_dotfiles install_packages \
+	$(SPACEMACS)
 
 $(PREZTO) install_prezto:
 	git clone --recursive \
@@ -51,6 +53,9 @@ $(FZF) install_fzf:
 	git clone --recursive \
 	https://gitlab.com/saruman9/fzf-prezto.git $(ZDOTDIR)/.zprezto-contrib/fzf \
 	|| true
+
+$(TPM) install_tpm:
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true
 
 install_packages: $(YAY) install_packages_base \
 	install_packages_desktop install_packages_developing \
