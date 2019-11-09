@@ -1,0 +1,6 @@
+name ru-en
+charset iso8859-5
+special ' -*-
+soundslike ru-en
+affix ru-en
+affix-compress true
