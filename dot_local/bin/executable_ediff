@@ -1,0 +1,6 @@
+#!/bin/env sh
+if [[ $# -eq 2 ]]; then
+    emc --eval "(ediff-files \"$1\" \"$2\")"
+else
+    emc --eval "(ediff-files3 \"$1\" \"$2\" \"$3\")"
+fi
