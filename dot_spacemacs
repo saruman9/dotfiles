@@ -484,17 +484,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
               (set-fill-column 100)
               (spacemacs/toggle-visual-line-navigation-on)
               (visual-fill-column-mode)))
-  ;; (add-hook 'markdown-mode-hook
-  ;;           (lambda ()
-  ;;             (set-fill-column 100)
-  ;;             (visual-line-mode 1)
-  ;;             ;; (visual-fill-column-mode 1)
-  ;;             ))
-  ;; (add-hook 'markdown-mode-hook 'turn-on-visual-line-mode)
-  ;; (add-hook 'markdown-mode-hook 'visual-line-mode)
-  ;; (spacemacs|use-package-add-hook markdown-mode
-  ;;   :post-config
-  ;;   (visual-line-mode 1))
   )
 
 (defun dotspacemacs/user-load ()
