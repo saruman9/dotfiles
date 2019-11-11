@@ -51,6 +51,7 @@ This function should only modify configuration layer settings."
      systemd
      treemacs
      vimscript
+     xclipboard
      yaml
 
      (c-c++ :variables
