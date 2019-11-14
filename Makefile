@@ -10,7 +10,9 @@ YAY := /bin/yay
 SPACEMACS := $(HOME)/.emacs.d
 
 YAY_COMMAND := yay -Sy --needed --norebuild --noconfirm \
-	$$(cat $(PACKAGES_DIR)/base.list | sed 's/ \#.*$$//g')
+	$$(cat $(PACKAGES_DIR)/base.list \
+	| sed 's/ \#.*$$//g' \
+	| grep -vx "$$(yay -Qq)")
 
 
 .PHONY: all update install
