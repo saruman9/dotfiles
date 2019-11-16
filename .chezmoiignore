@@ -1,3 +1,4 @@
+.IdeaIC2019.2
 .Xauthority
 .cache
 .cargo
@@ -25,6 +26,7 @@
 .gradle
 .java
 .lesshst
+.local/share/JetBrains
 .local/share/SpeedCrunch
 .local/share/TelegramDesktop
 .local/share/applications
