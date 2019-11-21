@@ -31,6 +31,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# disable mouse focus
+focus_follows_mouse no
+
 # start rofi run (a program launcher)
 bindsym $mod+Menu exec --no-startup-id rofi -show run -modi drun
 bindsym $mod+d exec --no-startup-id rofi -show drun -modi drun
