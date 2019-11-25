@@ -10,6 +10,7 @@ flamegraph
 global
 gnuplot
 gradle
+gradle-doc
 inotify-tools
 intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
@@ -19,6 +20,8 @@ jre-openjdk
 ltrace-git
 mypy
 namcap
+openjdk-doc
+openjdk11-doc
 perf
 pygmentize
 python-pipenv
