@@ -248,8 +248,6 @@ bindsym $mod+t exec trans-notify.sh
 # charpicker
 bindsym $mod+i exec /home/neo/Repos/charpicker/charpicker.sh
 
-## Manual management of external displays
-exec --no-startup-id xrandr --output HDMI-1 --auto --left-of VGA-1
 # Set the shortcuts and what they do
 set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
 mode "$mode_display" {
