@@ -90,8 +90,10 @@ zsh
 amd-ucode
 {{- end }}
 {{- if eq .pc_loc "laptop" }}
-laptop-mode-tools
+ethtool
 powertop
+smartmontools
+tlp
 {{- end }}
 {{- if eq .pc_loc "work" }}
 kyocera-cups
