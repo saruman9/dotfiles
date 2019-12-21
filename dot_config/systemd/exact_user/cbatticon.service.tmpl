@@ -1,10 +1,10 @@
 {{ if eq .pc_loc "laptop" -}}
 [Unit]
 Description=PowerNotify
+StartLimitIntervalSec=0
 
 [Service]
 ExecStart=/bin/cbatticon -i symbolic
-StartLimitIntervalSec=0
 RestartSec=60
 
 [Install]
