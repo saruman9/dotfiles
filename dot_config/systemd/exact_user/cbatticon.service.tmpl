@@ -2,9 +2,11 @@
 [Unit]
 Description=PowerNotify
 StartLimitIntervalSec=0
+After=display-manager.service
 
 [Service]
 ExecStart=/bin/cbatticon -i symbolic
+Restart=always
 RestartSec=60
 
 [Install]
