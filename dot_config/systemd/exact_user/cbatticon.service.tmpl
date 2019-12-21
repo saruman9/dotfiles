@@ -4,6 +4,8 @@ Description=PowerNotify
 
 [Service]
 ExecStart=/bin/cbatticon -i symbolic
+StartLimitIntervalSec=0
+RestartSec=60
 
 [Install]
 WantedBy=default.target
