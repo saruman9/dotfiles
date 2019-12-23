@@ -26,3 +26,4 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;org.gnome.Evince.desktop;evince.desktop;
+text/plain=nvim.desktop;gvim.desktop;
