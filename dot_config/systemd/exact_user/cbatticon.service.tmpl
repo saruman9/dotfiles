@@ -5,7 +5,7 @@ StartLimitIntervalSec=0
 After=display-manager.service
 
 [Service]
-ExecStart=/bin/cbatticon -i symbolic
+ExecStart=/bin/cbatticon --icon-type symbolic --low-level 13
 Restart=always
 RestartSec=60
 
