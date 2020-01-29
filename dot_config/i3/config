@@ -241,6 +241,7 @@ for_window [class="TelegramDesktop"] floating enable
 for_window [class="SpeedCrunch"] sticky enable
 for_window [class="SpeedCrunch"] floating enable
 for_window [class="SpeedCrunch"] resize set 640 480
+for_window [class="Ghidra"][window_type=dialog] focus
 
 # translate
 bindsym $mod+t exec trans-notify.sh
