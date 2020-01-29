@@ -238,9 +238,9 @@ for_window [window_role="pop-up"] floating enable
 for_window [class="TelegramDesktop"] sticky enable
 for_window [class="TelegramDesktop"] resize set 454 572
 for_window [class="TelegramDesktop"] floating enable
-for_window [title="SpeedCrunch"] sticky enable
-for_window [title="SpeedCrunch"] floating enable
-for_window [title="SpeedCrunch"] resize set 640 480
+for_window [class="SpeedCrunch"] sticky enable
+for_window [class="SpeedCrunch"] floating enable
+for_window [class="SpeedCrunch"] resize set 640 480
 
 # translate
 bindsym $mod+t exec trans-notify.sh
