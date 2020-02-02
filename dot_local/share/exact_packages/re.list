@@ -7,6 +7,9 @@ capstone
 checksec
 diffoscope
 dmidecode
+ghidra-extension-ghidra-cpp-class-analyzer-git
+ghidra-extension-ghidra-firmware-utils-git
+ghidra-extension-gotools-git
 ghidra-git
 httpie
 jd-gui-bin
