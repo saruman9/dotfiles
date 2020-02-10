@@ -180,7 +180,7 @@
   - Comment out: GRUB_GFXPAYLOAD_LINUX (terminus font is great at native resolution)
 
   # grub-mkconfig -o /boot/grub/grub.cfg
-  # grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
+  # grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
   ```
 
 1. Generate machine id:
