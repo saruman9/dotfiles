@@ -86,7 +86,7 @@
 1. Install packages:
 
   ```sh
-  # pacstrap /mnt base base-devel
+  # pacstrap /mnt base base-devel linux linux-firmware
                   grub efibootmgr  # bootloader
                   amd-ucode        # or intel-ucode, microcode
                   zsh              # default shell
