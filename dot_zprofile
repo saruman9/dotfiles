@@ -104,3 +104,9 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Increase history limits
+#
+export HISTSIZE=100000000
+export SAVEHIST=100000000
