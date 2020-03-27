@@ -7,7 +7,8 @@ set from        = `pass google.com/mail/main/username`
 set pgp_sign_as = `pass home/gpg-id`
 
 # Specify where to save and/or look for postponed messages.
-set postponed   = +[Gmail]/Drafts
+set postponed   = "+[Gmail].Drafts"
+set record      = "+[Gmail].Sent Mail"
 set folder    = "~/Mail"
 
 set smtp_url      = smtps://$imap_user:$imap_pass@smtp.gmail.com
