@@ -1,0 +1,42 @@
+[general]
+accounts = main
+pythonfile = ~/.config/offlineimap/script.py
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(foldername)s"
+sep = " "
+footer = "\n"
+
+[Account main]
+autorefresh = 0.5
+quick = 10
+localrepository = main-local
+remoterepository = main-remote
+
+[Repository main-local]
+type = Maildir
+localfolders = ~/Mail
+
+[Repository main-remote]
+type = IMAP
+{{- if eq .pass "y" }}
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
+remotehost = {{ pass "google.com/mail/main/imap" }}
+remoteuser = {{ pass "google.com/mail/main/username" }}
+nametrans = lambda foldername: re.sub ('^\[gmail\]', 'bak',
+                               re.sub ('sent_mail', 'sent',
+                               re.sub ('starred', 'flagged',
+                               re.sub (' ', '_', foldername.lower()))))
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
+{{- else if eq .pc_loc "work" }}
+remotehost = {{ pass "work/imap.dsec.ru/url" }}
+remoteuser = {{ pass "work/imap.dsec.ru/username" }}
+{{ end }}
+{{- end -}}
+remotepasseval = get_pass()
+ssl = no
+keepalive = 60
+holdconnectionopen = yes

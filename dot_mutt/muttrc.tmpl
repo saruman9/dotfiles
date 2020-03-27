@@ -8,12 +8,10 @@ set pgp_sign_as = `pass home/gpg-id`
 
 # Specify where to save and/or look for postponed messages.
 set postponed   = +[Gmail]/Drafts
-set folder    = imaps://imap.gmail.com/
-mailboxes     =INBOX
+set folder    = "~/Mail"
 
 set smtp_url      = smtps://$imap_user:$imap_pass@smtp.gmail.com
 
-set record=""
 {{- else if eq .pc_loc "work" -}}
 set imap_user   = `pass work/imap.dsec.ru/username`
 set imap_pass   = `pass work/imap.dsec.ru/pass`
@@ -22,9 +20,11 @@ set from        = `pass work/imap.dsec.ru/username`
 set pgp_sign_as = `pass work/gpg-id`
 
 # Specify where to save and/or look for postponed messages.
-set folder=imaps://imap.dsec.ru/
+set postponed = "+Drafts"
+set record = "+Sent"
+
+set folder="~/Mail"
 set hostname="dsec.ru"
-mailboxes =INBOX =Spam
 
 my_hdr Bcc: `pass work/imap.dsec.ru/username`
 
@@ -35,10 +35,9 @@ set ssl_verify_dates = no
 set ssl_starttls = yes
 
 set signature="~/.mutt/signature"
-
-unset record
 {{- end }}
 
+source ~/.mutt/mailboxes
 set spoolfile	= +INBOX
 set imap_check_subscribed
 
