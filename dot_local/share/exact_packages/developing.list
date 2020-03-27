@@ -2,6 +2,7 @@ asciidoctor
 astyle
 ccls
 clang
+compiledb
 ctags
 diff-so-fancy
 docker-compose
@@ -17,6 +18,7 @@ intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 ipython
 jdk-openjdk
+jdk11-openjdk
 jre-openjdk
 ltrace-git
 mypy
