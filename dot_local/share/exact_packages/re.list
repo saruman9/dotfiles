@@ -5,6 +5,7 @@ bpython
 cabextract
 capstone
 checksec
+ddrescue
 diffoscope
 dmidecode
 ghidra-extension-ghidra-cpp-class-analyzer-git
@@ -25,9 +26,11 @@ saleae-logic
 scapy
 spice-guest-tools-windows
 tcpdump
+testdisk
 uboot-tools
 understand-bin
 unicorn
+untrunc-git
 volatility
 whois
 wireshark-qt

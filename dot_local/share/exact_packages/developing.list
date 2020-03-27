@@ -6,6 +6,7 @@ compiledb
 ctags
 diff-so-fancy
 docker-compose
+doxygen
 eclipse-java
 flake8
 flamegraph
