@@ -1,5 +1,6 @@
 asciidoctor
 astyle
+ccls
 clang
 ctags
 diff-so-fancy
