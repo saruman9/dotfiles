@@ -31,7 +31,7 @@ nametrans = lambda foldername: re.sub ('^\[gmail\]', 'bak',
                                re.sub ('starred', 'flagged',
                                re.sub (' ', '_', foldername.lower()))))
 folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
-{{- else if eq .pc_loc "work" }}
+{{ else if eq .pc_loc "work" }}
 remotehost = {{ pass "work/imap.dsec.ru/url" }}
 remoteuser = {{ pass "work/imap.dsec.ru/username" }}
 {{ end }}
