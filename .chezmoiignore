@@ -1,9 +1,10 @@
 .IdeaIC2019.2
-.IntelliJIdea2019.2
+.IntelliJIdea2019.3
 .Xauthority
 .cache
 .cargo
 .config/QtProject.conf
+.config/Riot
 .config/chezmoi
 .config/i3/i3log
 .config/mpd/database
@@ -13,6 +14,8 @@
 .config/mpd/state
 .config/mpd/sticker.sql
 .config/mpv/watch_later
+.config/obs-studio
+.config/offlineimap/script.pyc
 .config/pulse
 .config/sqlitebrowser
 .config/transmission-daemon/blocklists
@@ -25,6 +28,7 @@
 .ghidra
 .gnupg
 .gradle
+.ipython
 .java
 .lesshst
 .local/share/JetBrains
@@ -44,11 +48,15 @@
 .local/share/zathura
 .mozilla
 .mpdscribble/mpdscribble.log
+.mutt/mailboxes
+.offlineimap
 .password-store
 .rustup
 .sane
 .tmux
 .viminfo
+.vnc/*.log
+.vnc/passwd
 .wget-hsts
 .wine
 .ynab4
@@ -59,8 +67,11 @@
 .zprezto-contrib
 Documents
 Downloads
+Mail
 Music
+Pictures
 Repos
+Reverse
 Video
 Work
 ghidra_scripts
