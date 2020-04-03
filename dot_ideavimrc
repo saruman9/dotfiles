@@ -1,0 +1,7 @@
+set surround
+set multiple-cursors
+set commentary
+
+nnoremap gn :action GotoNextError<CR>
+nnoremap gp :action GotoPreviousError<CR>
+:map \r :action ReformatCode<CR>
