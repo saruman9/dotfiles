@@ -16,10 +16,7 @@
 .config/mpv/watch_later
 .config/obs-studio
 .config/offlineimap/script.pyc
-.config/pulse/*-sink
-.config/pulse/*-source
-.config/pulse/*.tdb
-.config/pulse/cookie
+.config/pulse
 .config/sqlitebrowser
 .config/transmission-daemon/blocklists
 .config/transmission-daemon/dht.dat
