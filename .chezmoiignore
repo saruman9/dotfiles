@@ -11,6 +11,7 @@
 .config/mpd/log
 .config/mpd/mpd.conf
 .config/mpd/pid
+.config/mpd/playlists
 .config/mpd/state
 .config/mpd/sticker.sql
 .config/mpv/watch_later
