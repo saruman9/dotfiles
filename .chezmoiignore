@@ -34,6 +34,8 @@
 .lesshst
 .local/share/JetBrains
 .local/share/SpeedCrunch
+.local/share/Steam
+.local/share/Tabletop Simulator
 .local/share/TelegramDesktop
 .local/share/applications
 .local/share/applications/mimeinfo.cache
@@ -45,6 +47,8 @@
 .local/share/recently-used.xbel
 .local/share/vifm
 .local/share/vimiv
+.local/share/vlc
+.local/share/vulkan
 .local/share/xorg
 .local/share/zathura
 .mozilla
@@ -54,6 +58,9 @@
 .password-store
 .rustup
 .sane
+.steam
+.steampath
+.steampid
 .tmux
 .viminfo
 .vnc/*.log
