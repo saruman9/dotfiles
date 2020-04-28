@@ -10,6 +10,7 @@ doxygen
 eclipse-java
 flake8
 flamegraph
+git-delta
 global
 gnuplot
 gradle
