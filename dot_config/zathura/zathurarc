@@ -8,7 +8,6 @@
 # ░░░░░░  ░░░░░░░░    ░░  ░░   ░░  ░░░░░░ ░░░     ░░░░░░░░
 
 # colors
-set recolor true
 set default-bg "#2E3440"
 set default-fg "#D8DEE9"
 set recolor-lightcolor  "#2E3440"
@@ -27,4 +26,3 @@ set notification-bg "#5E81AC"
 # keybinds
 map [normal] ZZ quit
 map [normal] ZQ quit
-
