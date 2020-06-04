@@ -32,6 +32,7 @@
 .ipython
 .java
 .lesshst
+.local/bin/ipccli
 .local/share/JetBrains
 .local/share/SpeedCrunch
 .local/share/Steam
