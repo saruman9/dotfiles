@@ -28,6 +28,8 @@ spice-guest-tools-windows
 tcpdump
 testdisk
 uboot-tools
+uefi-firmware-parser-git
+uefitool-git
 understand-bin
 unicorn
 untrunc-git
