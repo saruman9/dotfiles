@@ -90,5 +90,5 @@ Work
 ghidra_scripts
 
 Makefile
-INSTALL.md
+README.md
 TODO.md
