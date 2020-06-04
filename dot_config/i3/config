@@ -247,8 +247,8 @@ for_window [class="Jitsi Meet"] floating enable
 # translate
 bindsym $mod+t exec trans-notify.sh
 
-# charpicker
-bindsym $mod+i exec /home/neo/Repos/charpicker/charpicker.sh
+# Unicode insert
+bindsym $Mod+i exec rofimoji
 
 # Bar
 bindsym $mod+Shift+t bar mode toggle
