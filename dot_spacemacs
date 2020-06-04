@@ -41,6 +41,7 @@ This function should only modify configuration layer settings."
      haskell
      helm
      html
+     julia
      lsp
      markdown
      multiple-cursors
@@ -53,6 +54,7 @@ This function should only modify configuration layer settings."
      vimscript
      xclipboard
      yaml
+     zig
 
      (c-c++ :variables
             c-c++-enable-clang-support t
