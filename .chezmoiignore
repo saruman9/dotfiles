@@ -46,6 +46,7 @@
 .local/share/mime
 .local/share/nvim
 .local/share/recently-used.xbel
+.local/share/rofimoji
 .local/share/vifm
 .local/share/vimiv
 .local/share/vlc
