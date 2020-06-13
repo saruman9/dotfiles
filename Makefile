@@ -53,7 +53,7 @@ $(YAY) install_yay:
 $(FZF) install_fzf:
 	mkdir $(ZDOTDIR)/.zprezto-contrib
 	git clone --recursive \
-	https://gitlab.com/saruman9/fzf-prezto.git $(ZDOTDIR)/.zprezto-contrib/fzf \
+	https://github.com/saruman9/fzf-prezto.git $(ZDOTDIR)/.zprezto-contrib/fzf \
 	|| true
 
 $(TPM) install_tpm:
