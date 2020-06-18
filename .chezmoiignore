@@ -1,10 +1,7 @@
-.IdeaIC2019.2
-.IntelliJIdea2019.3
 .Xauthority
 .cache
 .cargo
 .config/QtProject.conf
-.config/Riot
 .config/chezmoi
 .config/i3/i3log
 .config/mpd/database
@@ -60,9 +57,11 @@
 .password-store
 .rustup
 .sane
+.spacemacs.env
 .steam
 .steampath
 .steampid
+.telegram-cli
 .tmux
 .viminfo
 .vnc/*.log
