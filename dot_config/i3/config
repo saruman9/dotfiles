@@ -254,7 +254,7 @@ bindsym $Mod+i exec rofimoji
 bindsym $mod+Shift+t bar mode toggle
 bar {
   id                      bar-0
-  status_command          py3status --dbus-notify
+  status_command          py3status
   position                bottom
   mode                    hide
   workspace_buttons       yes
