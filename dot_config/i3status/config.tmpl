@@ -65,30 +65,19 @@ battery 0 {
         format_down = ""
         last_full_capacity = true
 }
-{{ if (eq .pc_loc "desktop") }}
+
 lm_sensors {
+{{- if (eq .pc_loc "desktop") }}
     chips = ["nct6797*"]
     sensors = ["cputin"]
-    format_chip = '{format_sensor}'
-    format_sensor = '[\?color=auto.input : {input}°C]'
-}
-{{- end -}}
-{{ if (eq .pc_loc "work") -}}
-lm_sensors {
+{{ end -}}
+{{ if or (eq .pc_loc "laptop") (eq .pc_loc "work") }}
     chips = ["coretemp-isa*"]
     sensors = ["package*"]
-    format_chip = '{format_sensor}'
-    format_sensor = '[\?color=auto.input : {input}°C]'
-}
-{{- end -}}
-{{ if (eq .pc_loc "laptop") }}
-lm_sensors {
-    chips = ["coretemp-isa*"]
-    sensors = ["package*"]
-    format_chip = '{format_sensor}'
-    format_sensor = '[\?color=auto.input : {input}°C]'
-}
 {{- end }}
+    format_chip = '{format_sensor}'
+    format_sensor = '[\?color=auto.input : {input}°C]'
+}
 
 volume master {
        format = "♪: %volume"
