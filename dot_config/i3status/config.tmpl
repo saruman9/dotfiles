@@ -70,7 +70,7 @@ lm_sensors {
 {{- if (eq .pc_loc "desktop") }}
     chips = ["nct6797*"]
     sensors = ["cputin"]
-{{ end -}}
+{{- end -}}
 {{ if or (eq .pc_loc "laptop") (eq .pc_loc "work") }}
     chips = ["coretemp-isa*"]
     sensors = ["package*"]
