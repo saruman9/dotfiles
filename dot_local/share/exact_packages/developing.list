@@ -15,8 +15,8 @@ gnuplot
 gradle
 gradle-doc
 inotify-tools
-intellij-idea-ultimate-edition
-intellij-idea-ultimate-edition-jre
+intellij-idea-community-edition
+intellij-idea-community-edition-jre
 ipython
 jdk-openjdk
 jdk11-openjdk
