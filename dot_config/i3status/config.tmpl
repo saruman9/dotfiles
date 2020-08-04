@@ -65,14 +65,14 @@ battery 0 {
         format_down = ""
         last_full_capacity = true
 }
-{{ if (eq .pc_loc "desktop") -}}
+{{ if (eq .pc_loc "desktop") }}
 lm_sensors {
     chips = ["nct6797*"]
     sensors = ["cputin"]
     format_chip = '{format_sensor}'
     format_sensor = '[\?color=auto.input : {input}°C]'
 }
-{{- end }}
+{{- end -}}
 {{ if (eq .pc_loc "work") -}}
 lm_sensors {
     chips = ["coretemp-isa*"]
