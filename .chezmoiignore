@@ -22,6 +22,7 @@
 .config/transmission-daemon/resume
 .config/transmission-daemon/stats.json
 .config/transmission-daemon/torrents
+.config/vlc
 .dropbox
 .emacs.d
 .ghidra
