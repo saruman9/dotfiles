@@ -1,6 +1,7 @@
 .Xauthority
 .cache
 .cargo
+.config/JetBrains
 .config/QtProject.conf
 .config/chezmoi
 .config/i3/i3log
