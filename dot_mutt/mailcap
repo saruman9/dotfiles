@@ -6,3 +6,4 @@ video/*; mpv %s
 application/pdf; zathura %s
 application/pdf; pdftotext -l 10 -nopgbrk -q -- %s - | fmt -w 120; copiousoutput;
 application/msword; libreoffice %s
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice %s
