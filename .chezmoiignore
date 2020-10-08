@@ -7,7 +7,6 @@
 .config/i3/i3log
 .config/mpd/database
 .config/mpd/log
-.config/mpd/mpd.conf
 .config/mpd/pid
 .config/mpd/playlists
 .config/mpd/state
