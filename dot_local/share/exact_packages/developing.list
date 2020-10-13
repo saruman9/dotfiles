@@ -5,7 +5,6 @@ clang
 compiledb
 ctags
 diff-so-fancy
-docker-compose
 doxygen
 flake8
 flamegraph
