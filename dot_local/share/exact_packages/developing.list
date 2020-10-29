@@ -30,6 +30,7 @@ perf
 pygmentize
 python-pipenv
 python-pylint
+rust-analyzer-git
 rust-racer # TODO: Install from rustup
 rustup
 sqlitebrowser
