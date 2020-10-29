@@ -37,6 +37,7 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'autosuggestions' \
   'command-not-found' \
+  'ssh' \
   'fzf' \
   'git' \
   'prompt'
