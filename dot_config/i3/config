@@ -39,7 +39,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -modi drun
 bindsym $mod+y exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # pass manager
-bindsym $mod+p exec --no-startup-id passmenu
+bindsym $mod+p exec --no-startup-id "greenclip_pause & passmenu &"
 
 # change focus
 bindsym $mod+h focus left
