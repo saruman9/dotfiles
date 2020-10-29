@@ -192,14 +192,18 @@ bindsym Mod3+KP_Begin exec --no-startup-id change_volume.sh 'mute' && py3-cmd re
 bindsym XF86TouchpadToggle exec synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
 
 # Audio play
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioStop exec mpc stop
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioNext exec mpc next
-bindsym Mod3+Down exec mpc toggle
-bindsym Mod3+Up exec mpc stop
-bindsym Mod3+Left exec mpc prev
-bindsym Mod3+Right exec mpc next
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+bindsym Mod3+Shift+Down exec playerctl -p mpd play-pause
+bindsym Mod3+Shift+Up exec playerctl -p mpd stop
+bindsym Mod3+Shift+Left exec playerctl -p mpd previous
+bindsym Mod3+Shift+Right exec playerctl -p mpd next
+bindsym Mod3+Down exec playerctl play-pause
+bindsym Mod3+Up exec playerctl stop
+bindsym Mod3+Left exec playerctl previous
+bindsym Mod3+Right exec playerctl next
 
 # ScreenShot
 bindsym Print exec flameshot gui

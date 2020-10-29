@@ -1,0 +1,5 @@
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") -}}
+/usr/lib/systemd/user/mpDris2.service
+{{- else -}}
+/dev/null
+{{- end -}}
