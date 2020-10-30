@@ -1,0 +1,4 @@
+#!/bin/sh
+
+chezmoi unmanaged \
+| fzf --preview "exa --color=always -lTL2 {}" --height=100 --bind 'enter:execute(exa --color=always -lT {} | less),del:execute(rm -rf {})'
