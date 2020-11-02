@@ -26,9 +26,8 @@ set record = "+Sent"
 set folder="~/Mail"
 set hostname="dsec.ru"
 
-my_hdr Bcc: `pass work/imap.dsec.ru/username`
-
-set smtp_url = smtp://$imap_user:$imap_pass@smtp.dsec.ru:587
+set smtp_pass = `pass work/imap.dsec.ru/pass`
+set smtp_url = smtps://$imap_user@smtp.dsec.ru:465
 
 set ssl_verify_host = no
 set ssl_verify_dates = no
