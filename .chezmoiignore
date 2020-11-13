@@ -16,6 +16,7 @@
 .config/offlineimap/script.pyc
 .config/pulse
 .config/sqlitebrowser
+.config/syncthing
 .config/transmission-daemon/blocklists
 .config/transmission-daemon/dht.dat
 .config/transmission-daemon/resume
@@ -83,6 +84,7 @@ Pictures
 Public
 Repos
 Reverse
+Sync
 Templates
 Videos
 Work

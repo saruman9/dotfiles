@@ -1,0 +1,6 @@
+#!/bin/sh
+
+pacman -Qeq \
+| grep -vx "$(cat ~/.local/share/packages/*.list | sed 's/\s.*//g' )" \
+| grep -vx "$(pacman -Qgq base-devel texlive-most xorg)" \
+| fzf --preview "pacman -Qil {}" --height=100 --bind 'enter:execute(pacman -Qil {} | less),del:execute(yay -Rscn --noconfirm {})'

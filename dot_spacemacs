@@ -64,8 +64,10 @@ This function should only modify configuration layer settings."
             gtags-enable-by-default nil)
 
      (latex :variables
+            latex-backend 'lsp
             latex-build-command "LatexMk"
-            latex-enable-auto-fill t)
+            latex-enable-folding t
+            )
 
      (org :variables
           org-enable-bootstrap-support t
