@@ -31,7 +31,7 @@ export PAGER='less'
 # Terminal
 #
 
-export TERMINAL='kitty'
+export TERMINAL='alacritty'
 
 #
 # FZF
