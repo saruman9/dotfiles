@@ -63,7 +63,13 @@
 .steampath
 .steampid
 .telegram-cli
-.tmux
+# TODO: Temp solution
+.tmux/*
+!.tmux/plugins
+.tmux/plugins/*
+!.tmux/plugins/tmux-picker
+.tmux/plugins/tmux-picker/*
+!.tmux/plugins/tmux-picker/tmux-picker.tmux
 .viminfo
 .vnc/*.log
 .vnc/passwd
