@@ -1,0 +1,129 @@
+sanitise tridactyllocal tridactylsync
+
+"
+" Binds
+"
+
+" Comment toggler for Reddit, Hacker News and Lobste.rs
+bind ;c hint -Jc [class*="expand"],[class="togg"],[class="comment_folder"]
+
+" Git{Hub,Lab} git clone via SSH yank
+bind yg composite js "git clone " + document.location.href.replace(/https?:\/\//,"git@").replace("/",":").replace(/$/,".git") | clipboard yank
+
+" As above but execute it and open terminal in folder
+bind ,g js let uri = document.location.href.replace(/https?:\/\//,"git@").replace("/",":").replace(/$/,".git"); tri.native.run("cd ~/Repos; git clone " + uri + "; cd \"$(basename \"" + uri + "\" .git)\"; $(TERMINAL)")
+
+" make d take you to the tab you were just on (I find it much less confusing)
+bind d composite tab #; tabclose #
+bind D tabclose
+
+bind / fillcmdline find
+bind ? fillcmdline find -?
+bind n findnext 1
+bind N findnext -1
+bind ,<Space> nohlsearch
+
+bind yt tabduplicate
+
+" Make gu take you back to subreddit from comments
+bindurl reddit.com gu urlparent 4
+
+" Allow Ctrl-a to select all in the commandline
+unbind --mode=ex <C-a>
+
+" Allow Ctrl-c to copy in the commandline
+unbind --mode=ex <C-c>
+
+" Handy multiwindow/multitasking binds
+bind gd tabdetach
+bind gD composite tabduplicate; tabdetach
+
+" Stupid workaround to let hint -; be used with composite which steals semi-colons
+command hint_focus hint -;
+
+" Open right click menu on links
+bind ;C composite hint_focus; !s xdotool key Menu
+
+bind --mode=insert      <C-a>   text.beginning_of_line
+bind --mode=input       <C-a>   text.beginning_of_line
+bind --mode=ex          <C-e>   text.end_of_line
+bind --mode=insert      <C-e>   text.end_of_line
+bind --mode=input       <C-e>   text.end_of_line
+bind --mode=ex          <C-f>   text.forward_word
+bind --mode=insert      <C-f>   text.forward_word
+bind --mode=input       <C-f>   text.forward_word
+bind --mode=ex          <C-k>   text.kill_line
+bind --mode=insert      <C-k>   text.kill_line
+bind --mode=input       <C-k>   text.kill_line
+bind --mode=ex          <C-u>   text.backward_kill_line
+bind --mode=insert      <C-u>   text.backward_kill_line
+bind --mode=input       <C-u>   text.backward_kill_line
+bind --mode=ex          <C-V>   composite getclip selection | text.insert_text
+bind --mode=insert      <C-V>   composite getclip selection | text.insert_text
+bind --mode=input       <C-V>   composite getclip sele
+
+"
+" Misc settings
+"
+
+set editorcmd alacritty -e 'emc %f'
+
+set smoothscroll true
+set allowautofocus false
+set theme dark
+
+" Defaults to 300ms but I'm a 'move fast and close the wrong tabs' kinda chap
+set hintdelay 100
+
+"
+" URL redirects
+"
+
+" New reddit is bad
+autocmd DocStart ^http(s?)://www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
+
+"
+" GUI
+"
+guiset_quiet tabs count
+guiset_quiet tabs always
+guiset_quiet navbar none
+guiset_quiet hoverlink top-right
+guiset_quiet statuspanel left
+
+"
+" Search
+"
+
+set searchurls.aur https://aur.archlinux.org/packages/?O=0&K=%s
+set searchurls.aw https://wiki.archlinux.org/index.php?search=%s
+set searchurls.bgg https://boardgamegeek.com/search/boardgame?q=%s
+set searchurls.cr https://crates.io/search?q=%s
+set searchurls.ddg https://duckduckgo.com/?q=%s
+set searchurls.drs https://docs.rs/releases/search?query=%s
+set searchurls.g https://www.google.com/search?q=%s
+set searchurls.gh https://github.com/search?utf8=✓&q=%s
+set searchurls.gi https://www.google.com/search?tbm=isch&q=%s
+set searchurls.gm https://www.google.com/maps?q=%s
+set searchurls.gt http://translate.google.com/?source=osdd#auto|auto|%s
+set searchurls.hn https://www.hnsearch.com/search#request/submissions&q=%s&start=0
+set searchurls.imdb http://www.imdb.com/find?s=all&q=%s
+set searchurls.k https://www.kinopoisk.ru/index.php?kp_query=%s&first=no
+set searchurls.osm https://www.openstreetmap.org/search?query=%s
+set searchurls.pd https://docs.python.org/3/search.html?q=%s
+set searchurls.r http://rutracker.org/forum/tracker.php?nm=%s&o=10&s=2
+set searchurls.rd https://doc.rust-lang.org/std/?search=%s
+set searchurls.rep https://repology.org/projects/?search=%s
+set searchurls.so http://stackoverflow.com/search?q=%s
+set searchurls.t https://twitter.com/search?q=%s
+set searchurls.tes https://tesera.ru/search?q=%s
+set searchurls.w http://en.wikipedia.org/wiki/Special:Search?search=%s
+set searchurls.wd https://ru.wiktionary.org/wiki/%s
+set searchurls.wo http://www.wolframalpha.com/input/?i=%s
+set searchurls.wru https://ru.wikipedia.org/w/index.php?search=%s
+set searchurls.ym https://yandex.ru/maps/?mode=search&text=%s
+set searchurls.ymar https://market.yandex.ru/search?text=%s
+set searchurls.yt https://www.youtube.com/results?search_query=%s
+set searchurls.ytr https://translate.yandex.com/?text=%s
+
+set searchengine g
