@@ -44,8 +44,6 @@ command hint_focus hint -;
 " Open right click menu on links
 bind ;C composite hint_focus; !s xdotool key Menu
 
-bind --mode=insert      <C-a>   text.beginning_of_line
-bind --mode=input       <C-a>   text.beginning_of_line
 bind --mode=ex          <C-e>   text.end_of_line
 bind --mode=insert      <C-e>   text.end_of_line
 bind --mode=input       <C-e>   text.end_of_line
@@ -66,7 +64,7 @@ bind --mode=input       <C-V>   composite getclip sele
 " Misc settings
 "
 
-set editorcmd alacritty -e 'emc %f'
+set editorcmd alacritty -e emc %f
 
 set smoothscroll true
 set allowautofocus false
