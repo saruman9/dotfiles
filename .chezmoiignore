@@ -16,7 +16,6 @@
 .config/offlineimap/script.pyc
 .config/pulse
 .config/sqlitebrowser
-.config/syncthing
 .config/transmission-daemon/blocklists
 .config/transmission-daemon/dht.dat
 .config/transmission-daemon/resume
@@ -88,7 +87,6 @@ Mail
 Public
 Repos
 Reverse
-Sync
 Templates
 Work
 ghidra_scripts
