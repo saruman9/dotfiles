@@ -175,8 +175,8 @@ exec xset -dpms
 exec xset s off
 
 # Brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 1
-bindsym XF86MonBrightnessUp exec xbacklight -inc 1
+bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec light -A 5
 
 # Audio Volume
 set $refresh_i3status killall -SIGUSR1 py3status
