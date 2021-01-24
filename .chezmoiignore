@@ -1,10 +1,10 @@
 .Xauthority
 .cache
 .cargo
-.config/JetBrains
-.config/QtProject.conf
 .config/chezmoi
+.config/Code
 .config/i3/i3log
+.config/JetBrains
 .config/mpd/database
 .config/mpd/log
 .config/mpd/pid
@@ -15,6 +15,7 @@
 .config/obs-studio
 .config/offlineimap/script.pyc
 .config/pulse
+.config/QtProject.conf
 .config/sqlitebrowser
 .config/transmission-daemon/blocklists
 .config/transmission-daemon/dht.dat
@@ -72,6 +73,8 @@
 .viminfo
 .vnc/*.log
 .vnc/passwd
+.vscode
+.vscode-server
 .wget-hsts
 .wine
 .ynab4
