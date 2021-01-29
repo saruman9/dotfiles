@@ -27,9 +27,6 @@ export EDITOR='code -n -w'
 export VISUAL='code -n -w'
 export PAGER='less'
 
-alias cnw='code -n -w'
-alias cnwd='code -n -w -d'
-
 #
 # Terminal
 #
