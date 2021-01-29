@@ -25,6 +25,8 @@
 .config/vlc
 .dropbox
 .emacs.d
+.gdb_history
+.gdbinit
 .ghidra
 .gnupg
 .gradle
@@ -72,10 +74,12 @@
 !.tmux/plugins/tmux-picker/tmux-picker.tmux
 .viminfo
 .vnc/*.log
+.vnc/default.tigervnc
 .vnc/passwd
 .vscode
 .vscode-server
 .wget-hsts
+.winbox
 .wine
 .ynab4
 .zcompdump
