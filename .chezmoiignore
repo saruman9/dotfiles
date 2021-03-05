@@ -63,8 +63,13 @@
 .steampath
 .steampid
 .telegram-cli
-.tmux/plugins
-.tmux/resurrect
+# TODO: Temp solution
+.tmux/*
+!.tmux/plugins
+.tmux/plugins/*
+!.tmux/plugins/tmux-picker
+.tmux/plugins/tmux-picker/*
+!.tmux/plugins/tmux-picker/tmux-picker.tmux
 .viminfo
 .vnc/*.log
 .vnc/default.tigervnc
