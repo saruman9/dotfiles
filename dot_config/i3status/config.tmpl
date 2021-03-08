@@ -17,6 +17,9 @@ order += "mpris"
 # order += "mpd_status"
 {{ end -}}
 order += "disk /home"
+{{ if eq .pc_loc "desktop" -}}
+order += "disk /media"
+{{ end -}}
 order += "ipv6"
 order += "path_exists VPN"
 order += "wireless _first_"
@@ -107,3 +110,9 @@ disk "/" {
 disk "/home" {
         format = ": %avail"
 }
+
+{{ if eq .pc_loc "desktop" -}}
+disk "/media" {
+        format = " (media): %avail"
+}
+{{ end -}}
