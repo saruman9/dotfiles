@@ -1,0 +1,92 @@
+icons = "awesome"
+
+[theme]
+name = "slick"
+[theme.overrides]
+alternating_tint_bg = "#414141"
+alternating_tint_fg = "#0f0f0f"
+info_fg = "#0f0f0f"
+
+[[block]]
+block = "pacman"
+format = "{pacman} + {aur} = {both}"
+aur_command = "yay -Qua"
+warning_updates_regex = "linux"
+hide_when_uptodate = true
+
+{{ if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") -}}
+[[block]]
+block = "music"
+marquee_interval = 1
+marquee_speed = 0.2
+# dynamic_width = true
+# max_width = 100
+buttons = ["prev", "play", "next"]
+hide_when_empty = true
+{{- end }}
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GiB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "disk_space"
+{{ if eq .pc_loc "desktop" -}}
+path = "/media"
+alias = "/media"
+{{ end -}}
+{{ if eq .pc_loc "laptop" -}}
+path = "/home"
+alias = "/home"
+{{ end -}}
+info_type = "available"
+unit = "GiB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "net"
+format = "{ssid}:{ip} ({signal_strength}){speed_up}{speed_down}"
+
+[[block]]
+block = "networkmanager"
+interface_name_include = ["tun\\d+"]
+
+[[block]]
+block = "battery"
+allow_missing = true
+hide_missing = true
+
+[[block]]
+block = "temperature"
+collapsed = false
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m} {5m} {15m}"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mup}%"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "time"
+interval = 1
+format = "%a, %d %b — %H:%M:%S"
