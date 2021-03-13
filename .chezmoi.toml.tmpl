@@ -2,7 +2,6 @@
 {{- $pass := promptString "pass installed (y/n)" -}}
 verbose = true
 color = "on"
-encryption = "gpg"
 
 [data]
 pc_loc = "{{- $pc_loc -}}"
@@ -12,9 +11,9 @@ pass = "{{- $pass -}}"
 recipient = "27B49A4ADC4B469DC8F2BDD91769FEA6B860FF90"
 
 {{ if eq $pass "y" -}}
-[secret]
+[genericSecret]
 command = "pass"
 {{- end }}
 
 [merge]
-command = "ediff"
+command = "code -n -w --diff"
