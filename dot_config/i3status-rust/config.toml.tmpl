@@ -17,10 +17,10 @@ hide_when_uptodate = true
 {{ if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") -}}
 [[block]]
 block = "music"
+player = "playerctld"
 marquee_interval = 1
 marquee_speed = 0.2
-# dynamic_width = true
-# max_width = 100
+dynamic_width = true
 buttons = ["prev", "play", "next"]
 hide_when_empty = true
 {{- end }}
