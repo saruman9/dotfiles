@@ -28,6 +28,7 @@
 .gdbinit
 .ghidra
 .gnupg
+.go
 .gradle
 .ipython
 .java
