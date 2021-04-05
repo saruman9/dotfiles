@@ -1,22 +1,22 @@
 [user]
 {{- if eq .pass "y" }}
-{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
+{{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") (eq .pc_loc "work") }}
   email = {{ pass "home/email/main" }}
   name = {{ pass "home/git/username" }}
   signingkey = {{ pass "home/gpg-id" }}
-{{- else if eq .pc_loc "work" }}
-  email = {{ pass "work/email/main" }}
-  name = {{ pass "work/git/username" }}
-  signingkey = {{ pass "work/gpg-id" }}
 {{- else if eq .pc_loc "other" }}
   # email = EMAIL
   # name =  USERNAME
   # signingkey = GPG-ID
-{{ end }}
+{{- end }}
 {{- end }}
 [core]
+{{- if (eq .pc_loc "work") }}
+  editor = emacsclient -t -a=""
+{{- else }}
   editor = code -n -w
-	pager = delta
+{{- end }}
+  pager = delta
 [commit]
   gpgsign = true
 [alias]
@@ -29,4 +29,4 @@
 [push]
   default = current
 [interactive]
-	diffFilter = delta --color-only
+  diffFilter = delta --color-only
