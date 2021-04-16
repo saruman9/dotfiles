@@ -254,6 +254,9 @@ bindsym $mod+t exec trans-notify.sh
 # Unicode insert
 bindsym $Mod+i exec rofimoji
 
+# Emacs everywhere
+bindsym $mod+Shift+i exec emacsclient --eval "(emacs-everywhere)"
+
 # Bar
 bindsym $mod+Shift+t bar mode toggle
 bar {
