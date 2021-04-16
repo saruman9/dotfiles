@@ -42,6 +42,9 @@
   (push "firefox" emacs-everywhere-markdown-apps)
   )
 
+(after! git-gutter
+  (setq git-gutter:disabled-modes '(image-mode pdf-view-mode)))
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
