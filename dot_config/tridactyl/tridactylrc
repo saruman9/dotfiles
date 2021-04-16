@@ -64,7 +64,7 @@ bind --mode=input       <C-V>   composite getclip sele
 " Misc settings
 "
 
-set editorcmd emt %f
+set editorcmd emacsclient -a "" -c %f
 
 set smoothscroll true
 set allowautofocus false
