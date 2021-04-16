@@ -64,7 +64,7 @@ bind --mode=input       <C-V>   composite getclip sele
 " Misc settings
 "
 
-set editorcmd code -n -w %f
+set editorcmd emt %f
 
 set smoothscroll true
 set allowautofocus false
