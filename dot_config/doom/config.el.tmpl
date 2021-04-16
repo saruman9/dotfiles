@@ -21,8 +21,13 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+{{- if eq .pc_loc "laptop" }}
+(setq doom-font (font-spec :family "monospace" :size 13)
+      doom-variable-pitch-font (font-spec :family "sans" :size 13))
+{{- else }}
 (setq doom-font (font-spec :family "monospace" :size 12)
       doom-variable-pitch-font (font-spec :family "sans" :size 12))
+{{- end }}
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -37,13 +42,21 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+(after! langtool
+  (setq langtool-default-language "ru-RU"))
+
 (after! emacs-everywhere
   (push "Telegram" emacs-everywhere-markdown-windows)
-  (push "firefox" emacs-everywhere-markdown-apps)
-  )
+  (push "firefox" emacs-everywhere-markdown-apps))
 
 (after! git-gutter
   (setq git-gutter:disabled-modes '(image-mode pdf-view-mode)))
+
+(use-package! visual-fill-column
+  :config
+  (setq-hook! 'visual-fill-column-mode-hook fill-column 100)
+  (add-hook! markdown-mode
+             #'visual-fill-column-mode))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
