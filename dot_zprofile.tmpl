@@ -22,13 +22,9 @@ fi
 #
 # Editors
 #
-{{ if (eq .pc_loc "work") }}
+
 export EDITOR='emc'
 export VISUAL='emc'
-{{- else }}
-export EDITOR='code -n -w'
-export VISUAL='code -n -w'
-{{- end }}
 export PAGER='less'
 
 #

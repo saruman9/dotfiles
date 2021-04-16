@@ -1,6 +1,6 @@
 #!/bin/env sh
 if [[ $# -eq 2 ]]; then
-    code -n -w -d "$1" "$2"
+    emc --eval "(ediff-files \"$1\" \"$2\")"
 else
-    code -n -w -d "$1" "$2" "$3"
+    emc --eval "(ediff-files3 \"$1\" \"$2\" \"$3\")"
 fi

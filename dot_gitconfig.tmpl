@@ -11,11 +11,7 @@
 {{- end }}
 {{- end }}
 [core]
-{{- if (eq .pc_loc "work") }}
-  editor = emacsclient -t -a=""
-{{- else }}
-  editor = code -n -w
-{{- end }}
+  editor = emacsclient -t -a=\\\"\\\"
   pager = delta
 [commit]
   gpgsign = true
