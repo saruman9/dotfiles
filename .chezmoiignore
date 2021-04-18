@@ -1,9 +1,10 @@
 .cache
 .cargo
-.config/chezmoi
 .config/Code
-.config/i3/i3log
-.config/JetBrains
+.config/Jitsi Meet
+.config/QtProject.conf
+.config/chezmoi
+.config/emacs
 .config/mpd/database
 .config/mpd/log
 .config/mpd/pid
@@ -14,7 +15,6 @@
 .config/obs-studio
 .config/offlineimap/script.pyc
 .config/pulse
-.config/QtProject.conf
 .config/sqlitebrowser
 .config/transmission-daemon/blocklists
 .config/transmission-daemon/dht.dat
@@ -23,31 +23,27 @@
 .config/transmission-daemon/torrents
 .config/vlc
 .dropbox
-.emacs.d
 .gdb_history
 .gdbinit
 .ghidra
 .gnupg
 .go
-.gradle
 .ipython
-.java
 .languagetool.cfg
 .lesshst
+.local/share/SpeedCrunch
+.local/share/Steam
+.local/share/Tabletop Simulator
+.local/share/TelegramDesktop
 .local/share/applications
 .local/share/applications/mimeinfo.cache
 .local/share/chezmoi
 .local/share/desktop-directories
 .local/share/icons
-.local/share/JetBrains
 .local/share/mime
 .local/share/nvim
 .local/share/recently-used.xbel
 .local/share/rofimoji
-.local/share/SpeedCrunch
-.local/share/Steam
-.local/share/Tabletop Simulator
-.local/share/TelegramDesktop
 .local/share/vifm
 .local/share/vlc
 .local/share/vulkan
@@ -59,12 +55,9 @@
 .offlineimap
 .password-store
 .rustup
-.sane
-.spacemacs.env
 .steam
 .steampath
 .steampid
-.telegram-cli
 # TODO: Temp solution
 .tmux/*
 !.tmux/plugins
@@ -72,6 +65,7 @@
 !.tmux/plugins/tmux-picker
 .tmux/plugins/tmux-picker/*
 !.tmux/plugins/tmux-picker/tmux-picker.tmux
+.Xauthority
 .viminfo
 .vnc/*.log
 .vnc/default.tigervnc
@@ -81,7 +75,6 @@
 .wget-hsts
 .winbox
 .wine
-.Xauthority
 .ynab4
 .zcompdump
 .zcompdump.zwc
@@ -90,11 +83,11 @@
 .zprezto-contrib
 Documents
 Downloads
-ghidra_scripts
 Mail
 Repos
 Reverse
 Work
+ghidra_scripts
 
 Makefile
 README.md
