@@ -63,6 +63,9 @@
   (add-hook! markdown-mode
              #'visual-fill-column-mode))
 
+(after! docker
+  (setenv "DOCKER_HOST" (concat "unix://" (getenv "XDG_RUNTIME_DIR") "/docker.sock")))
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
