@@ -54,6 +54,9 @@
 (after! git-gutter
   (setq git-gutter:disabled-modes '(image-mode pdf-view-mode)))
 
+(map! (:when (featurep! :tools lsp)
+       :n "gh" 'lsp-describe-thing-at-point))
+
 (use-package! visual-fill-column
   :config
   (setq-hook! 'visual-fill-column-mode-hook fill-column 100)
