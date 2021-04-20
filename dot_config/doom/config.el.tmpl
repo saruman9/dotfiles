@@ -61,6 +61,8 @@
   :config
   (setq-hook! 'visual-fill-column-mode-hook fill-column 100)
   (add-hook! markdown-mode
+             #'visual-fill-column-mode)
+  (add-hook! org-mode
              #'visual-fill-column-mode))
 
 (after! docker
