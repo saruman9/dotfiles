@@ -37,7 +37,6 @@
 .local/share/Steam
 .local/share/Tabletop Simulator
 .local/share/TelegramDesktop
-.local/share/applications
 .local/share/applications/mimeinfo.cache
 .local/share/chezmoi
 .local/share/desktop-directories
