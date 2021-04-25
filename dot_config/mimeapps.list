@@ -12,6 +12,7 @@ application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 x-scheme-handler/tg=telegramdesktop.desktop
+x-scheme-handler/org-protocol=org-protocol.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
