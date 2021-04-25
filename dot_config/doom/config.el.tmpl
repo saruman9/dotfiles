@@ -42,6 +42,18 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+(after! calendar
+  (calendar-set-date-style 'european)
+  (setq calendar-week-start-day 1))
+
+(defun open-calendar ()
+  (interactive)
+  (cfw:open-calendar-buffer
+   :contents-sources
+   (list
+    (cfw:org-create-source "Green")  ; org-agenda source
+    )))
+
 (setq-default fill-column 100)
 
 (after! langtool
