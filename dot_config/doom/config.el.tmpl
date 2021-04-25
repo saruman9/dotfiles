@@ -136,6 +136,36 @@
            :heading "Changelog"
            :prepend t))))
 
+(after! org-roam
+  (push org-roam-directory org-agenda-files)
+  (setq org-roam-capture-templates
+        '(("y" "yt-task" plain #'org-roam-capture--get-point
+           "* Title\n%?\n* Body\n\n* Commentaries"
+           :file-name "%<%Y%m%d%H%M%S>-${slug}"
+           :head "#+title: ${title}\n#+roam_key:{{- pass "work/yt/url" -}}issue/${title}
+#+roam_tags: {{ pass "work/yt/project/name" }} {{ pass "work/yt/project/tags" -}}\n:PROPERTIES:
+:CATEGORY: {{- pass "work/yt/project/tags" -}}\n:END:\n\n"
+           :unnarrowed t)
+          ("c" "yt-commentary" plain #'org-roam-capture--get-point
+           "** ${title}
+:PROPERTIES:
+:CREATED: %t
+:END:
+
+%?"
+           :unnarrowed t)
+          ("d" "default" plain #'org-roam-capture--get-point
+           "%?"
+           :file-name "%<%Y%m%d%H%M%S>-${slug}"
+           :head "#+title: ${title}\n"
+           :unnarrowed t)))
+  (setq org-roam-dailies-capture-templates
+        '(("j" "journal" entry #'org-roam-capture--get-point
+           "* [%T] %?"
+           :file-name "daily/%<%Y-%m-%d>"
+           :head "#+title: %<%Y-%m-%d>"
+           :narrow ))))
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
