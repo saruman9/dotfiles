@@ -16,6 +16,8 @@
 .config/offlineimap/script.pyc
 .config/pulse
 .config/sqlitebrowser
+.config/systemd/user/default.target.wants/docker.service
+.config/systemd/user/default.target.wants/syncthing.service
 .config/transmission-daemon/blocklists
 .config/transmission-daemon/dht.dat
 .config/transmission-daemon/resume
