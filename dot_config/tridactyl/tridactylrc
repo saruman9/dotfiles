@@ -10,6 +10,9 @@ bind ;c hint -Jc [class*="expand"],[class="togg"],[class="comment_folder"]
 " Git{Hub,Lab} git clone via SSH yank
 bind yg composite js "git clone " + document.location.href.replace(/https?:\/\//,"git@").replace("/",":").replace(/$/,".git") | clipboard yank
 
+" org-roam capture
+bind C js javascript:location.href = 'org-protocol://roam-ref?template=r&ref=' + encodeURIComponent(location.href) + '&title=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.getSelection())
+
 " As above but execute it and open terminal in folder
 bind ,g js let uri = document.location.href.replace(/https?:\/\//,"git@").replace("/",":").replace(/$/,".git"); tri.native.run("cd ~/Repos; git clone " + uri + "; cd \"$(basename \"" + uri + "\" .git)\"; $(TERMINAL)")
 
