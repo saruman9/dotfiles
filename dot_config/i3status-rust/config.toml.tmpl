@@ -30,9 +30,9 @@ hide_when_empty = true
 [[block]]
 block = "disk_space"
 path = "/"
-alias = "/"
 info_type = "available"
-unit = "GiB"
+format = "{icon} / {available}"
+unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
@@ -41,14 +41,14 @@ alert = 10.0
 block = "disk_space"
 {{ if eq .pc_loc "desktop" -}}
 path = "/media"
-alias = "/media"
+format = "{icon} /media {available}"
 {{ end -}}
 {{ if eq .pc_loc "laptop" -}}
 path = "/home"
-alias = "/home"
+format = "{icon} /home {available}"
 {{ end -}}
 info_type = "available"
-unit = "GiB"
+unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
@@ -83,8 +83,8 @@ format = "{1m} {5m} {15m}"
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mup}%"
-format_swap = "{SUp}%"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
 
 [[block]]
 block = "sound"
