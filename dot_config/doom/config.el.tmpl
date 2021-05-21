@@ -170,6 +170,10 @@
            :narrow ))))
 
 (use-package! pkgbuild-mode)
+(use-package! protobuf-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-mode)))
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
