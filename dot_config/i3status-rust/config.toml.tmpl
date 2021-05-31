@@ -7,13 +7,6 @@ alternating_tint_bg = "#414141"
 alternating_tint_fg = "#0f0f0f"
 info_fg = "#0f0f0f"
 
-[[block]]
-block = "pacman"
-format = "{pacman} + {aur} = {both}"
-aur_command = "yay -Qua"
-warning_updates_regex = "linux"
-hide_when_uptodate = true
-
 {{ if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") -}}
 [[block]]
 block = "music"
@@ -74,17 +67,6 @@ collapsed = false
 [[block]]
 block = "cpu"
 interval = 1
-
-[[block]]
-block = "load"
-interval = 1
-format = "{1m} {5m} {15m}"
-
-[[block]]
-block = "memory"
-display_type = "memory"
-format_mem = "{mem_used_percents}"
-format_swap = "{swap_used_percents}"
 
 [[block]]
 block = "sound"
