@@ -1,10 +1,9 @@
 .cache
 .cargo
-.config/Code
-.config/Jitsi Meet
-.config/QtProject.conf
 .config/chezmoi
+.config/Code
 .config/emacs
+.config/Jitsi Meet
 .config/mpd/database
 .config/mpd/log
 .config/mpd/pid
@@ -15,6 +14,7 @@
 .config/obs-studio
 .config/offlineimap/script.pyc
 .config/pulse
+.config/QtProject.conf
 .config/sqlitebrowser
 .config/systemd/user/default.target.wants/docker.service
 .config/systemd/user/default.target.wants/syncthing.service
@@ -33,10 +33,6 @@
 .ipython
 .languagetool.cfg
 .lesshst
-.local/share/SpeedCrunch
-.local/share/Steam
-.local/share/Tabletop Simulator
-.local/share/TelegramDesktop
 .local/share/applications/mimeinfo.cache
 .local/share/chezmoi
 .local/share/desktop-directories
@@ -45,6 +41,10 @@
 .local/share/nvim
 .local/share/recently-used.xbel
 .local/share/rofimoji
+.local/share/SpeedCrunch
+.local/share/Steam
+.local/share/Tabletop Simulator
+.local/share/TelegramDesktop
 .local/share/vifm
 .local/share/vlc
 .local/share/vulkan
@@ -66,7 +66,6 @@
 !.tmux/plugins/tmux-picker
 .tmux/plugins/tmux-picker/*
 !.tmux/plugins/tmux-picker/tmux-picker.tmux
-.Xauthority
 .viminfo
 .vnc/*.log
 .vnc/default.tigervnc
@@ -76,6 +75,7 @@
 .wget-hsts
 .winbox
 .wine
+.Xauthority
 .ynab4
 .zcompdump
 .zcompdump.zwc
@@ -84,11 +84,11 @@
 .zprezto-contrib
 Documents
 Downloads
+ghidra_scripts
 Mail
 Repos
 Reverse
 Work
-ghidra_scripts
 
 Makefile
 README.md
