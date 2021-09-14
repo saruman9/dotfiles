@@ -1,0 +1,13 @@
+configuration {
+    modi: "drun,window,run,ssh";
+    show-icons: true;
+    theme: "Arc-Dark";
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
+}
