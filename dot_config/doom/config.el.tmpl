@@ -178,6 +178,9 @@
       '(rustic-mode))
 
 (setq lsp-rust-analyzer-cargo-watch-command "clippy")
+(setq lsp-rust-analyzer-cargo-override-command ["cargo" "+nightly" "clippy" "-Zunstable-options"
+      "--message-format=json" "--all-targets" "--workspace" "--" "-W" "clippy::nursery"
+      "-W" "clippy::pedantic"])
 (setq lsp-rust-analyzer-proc-macro-enable t)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
