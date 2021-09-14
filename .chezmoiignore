@@ -50,6 +50,7 @@
 .local/share/vulkan
 .local/share/xorg
 .local/share/zathura
+.local/state/
 .mozilla
 .mpdscribble/mpdscribble.log
 .mutt/mailboxes
