@@ -1,5 +1,4 @@
 alsa-utils
-aspell
 base
 base-devel
 bat
@@ -11,13 +10,11 @@ cryptsetup
 cups
 dhclient
 downgrade
-edk2-ovmf
 efibootmgr
 elinks
 emacs
 exa
 exfat-utils
-expac
 fd
 fuseiso
 fzf
@@ -25,7 +22,6 @@ git
 git-lfs
 gnu-netcat
 grub
-gvim
 htop
 hunspell-en_US
 hunspell-ru-aot
@@ -33,7 +29,6 @@ hyphen-en
 hyphen-ru
 i7z
 ifuse
-imlib2-heic
 jq
 languagetool
 less
@@ -60,7 +55,6 @@ offlineimap
 openssh
 openvpn
 p7zip
-pacutils
 pamixer
 pass # TODO: Install early
 pdftk
@@ -70,15 +64,11 @@ pulseaudio
 pulseaudio-alsa
 pv
 qemu-arch-extra
-restic
 ripgrep
 rsync
-rxvt-unicode-patched # TODO: Temp solution for ssh
 samba
-sox
 sshfs
 sysstat
-telegram-cli-git # TODO: Use CLI or EMACS version
 terminus-cyrillic
 time
 tmux
@@ -89,7 +79,6 @@ udisks2 # TODO: Use systemd
 unrar
 unrar-free
 usbutils
-vbetool
 vifm
 w3m
 webtorrent-cli
@@ -106,9 +95,6 @@ ethtool
 powertop
 smartmontools
 tlp
-{{- end }}
-{{- if eq .pc_loc "work" }}
-kyocera-cups
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
 epson-inkjet-printer-escpr
