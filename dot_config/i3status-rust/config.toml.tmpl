@@ -36,7 +36,7 @@ block = "disk_space"
 path = "/media"
 format = "{icon} /media {available}"
 {{ end -}}
-{{ if eq .pc_loc "laptop" -}}
+{{ if or (eq .pc_loc "laptop") (eq .pc_loc "work") -}}
 path = "/home"
 format = "{icon} /home {available}"
 {{ end -}}
