@@ -26,7 +26,6 @@ type = IMAP
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
 remotehost = {{ pass "google.com/mail/main/imap" }}
 remoteuser = {{ pass "google.com/mail/main/username" }}
-folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 {{ else if eq .pc_loc "work" }}
 remotehost = {{ pass "work/imap.dsec.ru/url" }}
