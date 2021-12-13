@@ -1,8 +1,8 @@
 #!/bin/bash
-# change_volume.sh
+# changeVolume
 
-# Arbitrary but unique message id
-msgId="991049"
+# Arbitrary but unique message tag
+msgTag="myvolume"
 
 # Change the volume
 if [[ "$@" == "mute" ]]; then
@@ -11,14 +11,13 @@ else
     pactl set-sink-volume @DEFAULT_SINK@ $@% > /dev/null
 fi
 
-# Query amixer for the current volume and whether or not the speaker is muted
 volume="$(pamixer --get-volume)"
 mute="$(pamixer --get-mute)"
 if [[ $volume == 0 || "$mute" == "true" ]]; then
     # Show the sound muted notification
-    dunstify -u low -i audio-volume-muted -r "$msgId" "Volume muted"
+    dunstify -a "changeVolume" -u low -i audio-volume-muted -h string:x-dunst-stack-tag:$msgTag "Volume muted"
 else
     # Show the volume notification
-    dunstify -u low -i audio-volume-high -r "$msgId" \
-             "Volume: ${volume}%" "$(get_progress_string.sh 10 "" "" $volume)"
+    dunstify -a "changeVolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:$msgTag \
+    -h int:value:"$volume" "Volume: ${volume}%"
 fi
