@@ -251,6 +251,12 @@ for_window [class="Jitsi Meet"] floating enable
 # translate
 bindsym $mod+t exec trans-notify.sh
 
+# Dunst
+bindsym control+space exec dunstctl close
+bindsym control+shift+space exec dunstctl close-all
+bindsym control+grave exec dunstctl history-pop
+bindsym control+shift+period exec dunstctl context
+
 # Unicode insert
 bindsym $Mod+i exec rofimoji
 
