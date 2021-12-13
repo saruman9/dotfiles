@@ -1,7 +1,6 @@
 configuration {
     modi: "drun,window,run,ssh";
     show-icons: true;
-    theme: "Arc-Dark";
     timeout {
         action: "kb-cancel";
         delay:  0;
@@ -11,3 +10,5 @@ configuration {
         sorting-method:    "name";
     }
 }
+
+@theme "Arc-Dark"
