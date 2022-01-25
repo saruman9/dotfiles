@@ -11,7 +11,7 @@ application/x-extension-shtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
-x-scheme-handler/tg=telegramdesktop.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-4DNEG1.desktop
 x-scheme-handler/org-protocol=org-protocol.desktop
 
 [Added Associations]
@@ -29,3 +29,4 @@ application/x-extension-xht=firefox.desktop;
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;org.gnome.Evince.desktop;evince.desktop;
 text/plain=visual-studio-code.desktop;emacs.desktop;nvim.desktop;gvim.desktop;
 image/jpeg=feh.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-4DNEG1.desktop;
