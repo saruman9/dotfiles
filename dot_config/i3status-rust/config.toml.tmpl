@@ -32,14 +32,8 @@ alert = 10.0
 
 [[block]]
 block = "disk_space"
-{{ if eq .pc_loc "desktop" -}}
-path = "/media"
-format = "{icon} /media {available}"
-{{ end -}}
-{{ if or (eq .pc_loc "laptop") (eq .pc_loc "work") -}}
 path = "/home"
 format = "{icon} /home {available}"
-{{ end -}}
 info_type = "available"
 unit = "GB"
 interval = 20
