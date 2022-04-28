@@ -239,6 +239,7 @@ bindsym $mod+grave scratchpad show
 # Show specific window from scratchpad
 bindsym $mod+F1 [title="SpeedCrunch"] scratchpad show
 bindsym $mod+F2 [title="Telegram"] scratchpad show
+bindsym $mod+Control+T [class="kitty"] scratchpad show
 
 # Specific window configuration
 for_window [window_role="pop-up"] floating enable
