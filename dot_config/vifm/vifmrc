@@ -11,7 +11,7 @@
 " If you would like to use another vi clone such as Elvis or Vile
 " you will need to change this setting.
 
-" set vicmd=emc
+set vicmd=nvim
 " set vicmd=elvis\ -G\ termcap
 " set vicmd=vile
 
@@ -339,7 +339,7 @@ filetype *.7z
 fileviewer *.7z 7z l %c
 
 " Bin files
-fileviewer *.bin hexdump -C %c
+fileviewer *.bin,*.cov hexdump -C %c
 
 " Office files
 filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx libreoffice %f &
