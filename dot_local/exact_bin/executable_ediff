@@ -2,5 +2,5 @@
 if [ $# -eq 2 ]; then
     code --new-window --wait --diff "$1" "$2"
 else
-    emc --eval "(ediff-files3 \"$1\" \"$2\" \"$3\")"
+    code --new-window --wait --diff "$1" "$2"
 fi
