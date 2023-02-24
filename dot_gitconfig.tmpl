@@ -11,8 +11,14 @@
 {{- end }}
 {{- end }}
 [core]
-  editor = emacsclient -t -a=\\\"\\\"
+  editor = nvim
   pager = delta
+  abbrev = 8
+[merge]
+  tool = nvimdiff
+  conflictstyle = diff3
+[mergetool "code"]
+  cmd = code --new-window --wait --merge $REMOTE $LOCAL $BASE $MERGED
 [commit]
   gpgsign = true
 [alias]
@@ -26,3 +32,10 @@
   default = current
 [interactive]
   diffFilter = delta --color-only
+[delta]
+  navigate = true
+  light = false
+[diff]
+  colorMoved = default
+[log]
+	abbrevcommit = yes
