@@ -19,8 +19,7 @@ fi
 
 # Customize to your needs...
 
-alias cnw='code -n -w'
-alias cnwd='code -n -w -d'
+alias cnw='code --new-window --wait'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
