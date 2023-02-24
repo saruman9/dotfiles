@@ -48,6 +48,7 @@ set tmpdir        =/tmp		# where to store temp files
 
 set copy=ask-yes
 set abort_unmodified = no
+unset record
 
 set beep_new
 
@@ -88,6 +89,7 @@ set rfc2047_parameters=yes
 
 set date_format="%d-%m-%y %T"
 set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"
+set display_filter="exec sed -r \"s/^Date:\\s*(([F-Wa-u]{3},\\s*)?[[:digit:]]{1,2}\\s+[A-Sa-y]{3}\\s+[[:digit:]]{4}\\s+[[:digit:]]{1,2}:[[:digit:]]{1,2}(:[[:digit:]]{1,2})?\\s+[+-][[:digit:]]{4})/date +'Date: %a, %d %b %Y %H:%M:%S %z' -d '\\1'/e\""
 
 # folder-hook   *[sS]ent* 'set index_format="%2C | %Z [%d] %-30.30t (%-4.4c) %s"'
 # folder-hook ! *[sS]ent* 'set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"'
