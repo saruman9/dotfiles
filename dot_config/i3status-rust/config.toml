@@ -1,0 +1,51 @@
+[icons]
+icons = "awesome4"
+
+[theme]
+theme = "slick"
+[theme.overrides]
+alternating_tint_bg = "#414141"
+alternating_tint_fg = "#0f0f0f"
+info_fg = "#0f0f0f"
+
+[[block]]
+block = "disk_space"
+path = "/"
+interval = 20
+format = " $icon / $available "
+info_type = "available"
+warning = 20.0
+alert = 10.0
+alert_unit = "GB"
+
+[[block]]
+block = "disk_space"
+path = "/home"
+interval = 20
+format = " $icon /home $available "
+info_type = "available"
+warning = 20.0
+alert = 10.0
+alert_unit = "GB"
+
+[[block]]
+block = "net"
+format = " $icon {$ssid:|}$ip ($signal_strength) $speed_up $speed_down "
+
+[[block]]
+block = "battery"
+
+[[block]]
+block = "temperature"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "time"
+interval = 1
+format = " $icon $timestamp.datetime(f:'%a, %d %b — %H:%M:%S') "
