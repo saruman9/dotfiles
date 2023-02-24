@@ -20,6 +20,17 @@ fi
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
 
 #
+# Docker Rootless
+#
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+
+#
+# Intel switch off DRI 3
+#
+
+export LIBGL_DRI3_DISABLE=1
+
+#
 # Editors
 #
 
@@ -31,7 +42,7 @@ export PAGER='less'
 # Terminal
 #
 
-export TERMINAL='alacritty'
+export TERMINAL='kitty'
 
 #
 # FZF
@@ -65,26 +76,27 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  /usr/lib/jvm/default/bin
-  /usr/bin/site_perl
-  /usr/bin/vendor_perl
-  /usr/bin/core_perl
-  $NPM_PACKAGES/bin
-  $HOME/.node_modules/bin
-  $HOME/.cargo/bin
-  $HOME/.nimble/bin
-  $HOME/.local/bin
-  $GOPATH/bin
-  $path
-)
-
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 export MANPATH="$NPM_PACKAGES/share/man:$MANPATH"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/library"
+
+# Set the list of directories that Zsh searches for programs.
+path=(
+  /usr/bin/core_perl
+  /usr/bin/site_perl
+  /usr/bin/vendor_perl
+  /usr/lib/jvm/default/bin
+  /usr/local/{bin,sbin}
+  $GOPATH/bin
+  $HOME/.cargo/bin
+  $HOME/.dotnet/tools
+  $HOME/.local/bin
+  $HOME/.nimble/bin
+  $HOME/.node_modules/bin
+  $NPM_PACKAGES/bin
+  $path
+)
 
 #
 # Less
