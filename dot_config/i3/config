@@ -196,6 +196,7 @@ bindsym XF86TouchpadToggle exec synclient TouchpadOff=$(synclient -l | grep -c '
 
 # Audio play
 bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
@@ -207,6 +208,11 @@ bindsym Mod3+Down exec playerctl play-pause
 bindsym Mod3+Up exec playerctl stop
 bindsym Mod3+Left exec playerctl previous
 bindsym Mod3+Right exec playerctl next
+
+# Bluetooth hotkeys (audio profiles)
+bindsym $mod+Shift+M exec pactl set-card-profile bluez_card.88_C9_E8_26_9E_51 headset-head-unit-msbc
+bindsym $mod+M exec pactl set-card-profile bluez_card.88_C9_E8_26_9E_51 a2dp-sink-ldac
+bindsym $mod+Control+Shift+M exec pactl set-card-profile bluez_card.88_C9_E8_26_9E_51 off
 
 # ScreenShot
 bindsym Print exec flameshot gui
@@ -237,14 +243,14 @@ bindsym $mod+Shift+grave move scratchpad
 bindsym $mod+grave scratchpad show
 
 # Show specific window from scratchpad
-bindsym $mod+F1 [title="SpeedCrunch"] scratchpad show
-bindsym $mod+F2 [title="Telegram"] scratchpad show
+bindsym $mod+F1 [class="SpeedCrunch"] scratchpad show
+bindsym $mod+F2 [class="TelegramDesktop"] scratchpad show
 bindsym $mod+Control+T [class="kitty"] scratchpad show
 
 # Specific window configuration
 for_window [window_role="pop-up"] floating enable
 for_window [class="TelegramDesktop"] sticky enable
-for_window [class="TelegramDesktop"] resize set 454 572
+for_window [class="TelegramDesktop"] resize set 702 550
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="SpeedCrunch"] sticky enable
 for_window [class="SpeedCrunch"] floating enable
