@@ -3,6 +3,7 @@
 .config/chezmoi
 .config/Code
 .config/emacs
+.config/htop
 .config/Jitsi Meet
 .config/mpd/database
 .config/mpd/log
