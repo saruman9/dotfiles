@@ -34,6 +34,7 @@ format = " $icon {$ssid:|}$ip ($signal_strength) $speed_up $speed_down "
 
 [[block]]
 block = "battery"
+format = " {$icon $percentage|} "
 
 [[block]]
 block = "temperature"
