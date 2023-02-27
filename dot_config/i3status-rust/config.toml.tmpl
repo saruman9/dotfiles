@@ -32,9 +32,11 @@ alert_unit = "GB"
 block = "net"
 format = " $icon {$ssid:|}$ip ($signal_strength) $speed_up $speed_down "
 
+{{ if eq .pc_loc "laptop" }}
 [[block]]
 block = "battery"
 format = " {$icon $percentage|} "
+{{ end -}}
 
 [[block]]
 block = "temperature"
