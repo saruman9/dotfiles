@@ -68,13 +68,13 @@ set noiec
 
 " Selected color scheme
 
-colorscheme Default
+colorscheme near-default
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
 " See man date or man strftime for details.
 
-set timefmt=%m/%d\ %H:%M
+set timefmt=%Y/%m/%d\ %H:%M:%S
 
 " Show list of matches on tab completion in command-line mode
 
@@ -138,7 +138,7 @@ mark h ~/
 " %m run the command in a menu window
 
 command! df df -h %m 2> /dev/null
-command! diff emc --eval '(ediff-files "%f" "%F")'
+command! diff nvim -d %f %F
 command! zip zip -r %f.zip %f
 command! run !! ./%f
 command! make !!make %a
@@ -403,6 +403,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 " Customize view columns a bit (enable ellipsis for truncated file names)
 "
 " set viewcolumns=-{name}..,6{}.
+set viewcolumns=-{name}..,19{mtime}..,6{size}..
 
 " Filter-out build and temporary files
 "
