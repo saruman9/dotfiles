@@ -16,4 +16,8 @@ command = "pass"
 {{- end }}
 
 [merge]
-command = "ediff"
+command = "nvim"
+args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
+
+[diff]
+pager = "delta"
