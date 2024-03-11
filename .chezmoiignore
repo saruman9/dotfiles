@@ -4,16 +4,7 @@
 .config/Code
 .config/emacs
 .config/htop
-.config/Jitsi Meet
-.config/mpd/database
-.config/mpd/log
-.config/mpd/pid
-.config/mpd/playlists
-.config/mpd/state
-.config/mpd/sticker.sql
-.config/mpv/watch_later
 .config/obs-studio
-.config/offlineimap/script.pyc
 .config/pulse
 .config/QtProject.conf
 .config/sqlitebrowser
@@ -25,14 +16,11 @@
 .config/transmission-daemon/stats.json
 .config/transmission-daemon/torrents
 .config/vlc
-.dropbox
 .gdb_history
 .gdbinit
 .ghidra
 .gnupg
-.go
 .ipython
-.languagetool.cfg
 .lesshst
 .local/share/applications/mimeinfo.cache
 .local/share/chezmoi
@@ -44,7 +32,6 @@
 .local/share/rofimoji
 .local/share/SpeedCrunch
 .local/share/Steam
-.local/share/Tabletop Simulator
 .local/share/TelegramDesktop
 .local/share/vifm
 .local/share/vlc
@@ -53,9 +40,6 @@
 .local/share/zathura
 .local/state/
 .mozilla
-.mpdscribble/mpdscribble.log
-.mutt/mailboxes
-.offlineimap
 .password-store
 .rustup
 .steam
@@ -86,11 +70,7 @@
 .zprezto-contrib
 Documents
 Downloads
-ghidra_scripts
-Mail
 Repos
-Reverse
-Work
 
 Makefile
 README.md

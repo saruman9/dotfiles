@@ -1,9 +1,0 @@
-text/html; firefox -new-tab %s & sleep 5; test=test -n "$DISPLAY"; needsterminal
-text/html; w3m -o display_link_number=1 -I %{charset} -T text/html; copiousoutput;
-image/*; feh %s
-audio/*; mpv %s
-video/*; mpv %s
-application/pdf; zathura %s
-application/pdf; pdftotext -l 10 -nopgbrk -q -- %s - | fmt -w 120; copiousoutput;
-application/msword; libreoffice %s
-application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice %s

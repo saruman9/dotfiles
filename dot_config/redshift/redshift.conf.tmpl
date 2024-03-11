@@ -1,8 +1,0 @@
-{{ if eq .pass "y" -}}
-[redshift]
-location-provider=manual
-
-[manual]
-lat={{- pass "home/desktop/location/lat" }}
-lon={{- pass "home/desktop/location/lon" -}}
-{{- end }}
