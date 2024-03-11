@@ -1,7 +1,26 @@
-set surround
-set multiple-cursors
-set commentary
+set multicursor
+set NERDTree
+source ~/.intellimacs/spacemacs.vim
 
-nnoremap gn :action GotoNextError<CR>
-nnoremap gp :action GotoPreviousError<CR>
-:map \r :action ReformatCode<CR>
+" (Optional) Enable other Intellimacs modules
+source ~/.intellimacs/extra.vim
+source ~/.intellimacs/major.vim
+source ~/.intellimacs/hybrid.vim
+
+" (Optional) Enable which-key plugin
+source ~/.intellimacs/which-key.vim
+
+" History jumps
+nnoremap <C-o> <Action>(Back)
+nnoremap <C-i> <Action>(Forward)
+
+" Change jumps
+let g:WhichKeyDesc_Jump_ChangePrev = "[c prev-change"
+:map [c <Action>(VcsShowPrevChangeMarker)
+let g:WhichKeyDesc_Jump_ChangeNext = "]c next-change"
+:map ]c <Action>(VcsShowNextChangeMarker)
+
+" Git
+let g:WhichKeyDesc_Git_Revert = "<leader>gr    +revert"
+let g:WhichKeyDesc_Git_Revert_Line = "<leader>grl line"
+nnoremap <leader>grl <Action>(Vcs.RollbackChangedLines)
