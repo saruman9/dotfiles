@@ -1,5 +1,4 @@
 {{- if ne .pc_loc "other" -}}
-alacritty
 awesome-terminal-fonts
 chromium
 dunst
@@ -7,38 +6,40 @@ feh
 firefox
 firefox-i18n-ru
 firefox-spell-ru
-firefox-tridactyl-native
 flameshot
 gimp
 gnome-themes-extra
 i3-wm
 i3lock
-i3status
 i3status-rust
-jitsi-meet-desktop-bin
 kitty
 libreoffice-fresh
-lxappearance
-nerd-fonts-jetbrains-mono
+livecaptions
 network-manager-applet
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 obs-studio
+opensnitch
+opensnitch-ebpf-module
 pavucontrol
 peek
+picom
 qt5ct
-redshift
 rofi
+rofi-calc
 rofi-dmenu
 rofi-greenclip
 rofimoji
 screenkey
 speedcrunch
+spicetify-cli-git
+spotify
+spotify-adblock-git
 telegram-desktop
 tigervnc
+ttf-jetbrains-mono-nerd
 ttf-ms-fonts
-virt-viewer
 visual-studio-code-bin
 vlc
 wine-gecko
@@ -46,10 +47,9 @@ wine-mono
 winetricks
 xclip
 xdotool
-xkb-switch
+xkb-switch-i3
 xorg
 xorg-xinit
-xsane
 xsel
 xss-lock
 zathura
@@ -65,22 +65,20 @@ vulkan-radeon
 xf86-video-amdgpu
 {{- end }}
 {{- if eq .pc_loc "laptop" }}
-bbswitch
 cbatticon
 lib32-virtualgl
 lib32-vkd3d
 lib32-vulkan-mesa-layers
-nvidia-390xx-dkms
-nvidia-390xx-settings
-optimus-manager
 vkd3d
 vulkan-tools
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
-dropbox
+digikam
+emby-server
+ledger-live-bin
+onevpl-intel-gpu # hardware encoding for emby-server
 steam
 winbox
-ynab4
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "work") }}
 xf86-video-intel

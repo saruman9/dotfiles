@@ -61,7 +61,7 @@ $(TPM) install_tpm:
 
 install_packages: $(YAY) install_packages_base \
 	install_packages_desktop install_packages_developing \
-	install_packages_latex install_packages_mobile install_packages_re
+	install_packages_latex install_packages_mobile install_packages_re install_packages_games
 
 install_packages_base:
 	$(YAY_COMMAND)
@@ -80,6 +80,9 @@ install_packages_mobile:
 
 install_packages_re:
 	$(subst base.list,re.list,$(YAY_COMMAND))
+
+install_packages_games:
+	$(subst base.list,games.list,$(YAY_COMMAND))
 
 $(SPACEMACS) install_spacemacs:
 	git clone https://github.com/syl20bnr/spacemacs $(HOME)/.emacs.d

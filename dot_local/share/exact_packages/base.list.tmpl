@@ -1,38 +1,39 @@
+activitywatch-bin
 alsa-utils
+archlinux-keyring
+aria2
+atuin
 base
 base-devel
 bat
 bind
 chezmoi
-colordiff
 cpio
 cryptsetup
 cups
 dhclient
+dnsmasq
 downgrade
 efibootmgr
-elinks
 emacs
-exa
 exfat-utils
+eza
 fd
 fuseiso
 fzf
+gdu
 git
 git-lfs
 gnu-netcat
 grub
-htop
-hunspell-en_US
+htop-vim
+hunspell-en_gb
 hunspell-ru-aot
 hyphen-en
 hyphen-ru
-i7z
 ifuse
 jq
-languagetool
 less
-libimobiledevice
 linux
 linux-firmware
 linux-headers
@@ -41,8 +42,6 @@ man-pages
 mlocate
 mp3info
 mtr
-ncdu
-neomutt
 neovim
 net-tools
 networkmanager
@@ -51,28 +50,25 @@ nftables
 nmap
 ntfs-3g
 ntp
-offlineimap
 openssh
 openvpn
 p7zip
 pamixer
+pandoc-cli
 pass # TODO: Install early
 pdftk
 perl-image-exiftool
 pkgfile
-pulseaudio
 pulseaudio-alsa
-pv
-qemu-arch-extra
 ripgrep
 rsync
 samba
 sshfs
+sudo
 sysstat
-terminus-cyrillic
+texlive-fontsrecommended # for pandoc
 time
 tmux
-topgrade
 torsocks
 translate-shell
 udisks2 # TODO: Use systemd
@@ -80,11 +76,11 @@ unrar
 unrar-free
 usbutils
 vifm
-w3m
+vim-spell-ru
 webtorrent-cli
 wget
 windscribe-cli
-yay
+yay-bin
 zip
 zsh
 {{- if eq .pc_loc "desktop" }}
@@ -97,19 +93,12 @@ smartmontools
 tlp
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "desktop") }}
-epson-inkjet-printer-escpr
-mpc
-mpd
-mpdris2
-mpdscribble
 mpv
-ncmpcpp
 playerctl
-python-pydbus
 toxic
 transmission-cli
 tremc-git
-youtube-dl
+yt-dlp
 {{- end }}
 {{- if or (eq .pc_loc "laptop") (eq .pc_loc "work") }}
 intel-ucode
