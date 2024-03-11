@@ -170,12 +170,11 @@ bindsym $mod+r mode "resize"
 hide_edge_borders smart
 
 # AutoStart
-exec setxkbmap -layout us,ru -variant ,winkeys \
--option grp:caps_toggle,grp_led:caps,terminate:ctrl_alt_bksp,ctrl:ralt_rctrl,ctrl:rctrl_ralt
 exec xmodmap ~/.Xmodmap
 exec xset dpms 0 0 0
 exec xset -dpms
 exec xset s off
+exec picom --config /dev/null
 
 # Brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
@@ -211,7 +210,7 @@ bindsym Mod3+Right exec playerctl next
 
 # Bluetooth hotkeys (audio profiles)
 bindsym $mod+Shift+M exec pactl set-card-profile bluez_card.88_C9_E8_26_9E_51 headset-head-unit-msbc
-bindsym $mod+M exec pactl set-card-profile bluez_card.88_C9_E8_26_9E_51 a2dp-sink-ldac
+bindsym $mod+M exec pactl set-card-profile bluez_card.88_C9_E8_26_9E_51 a2dp-sink
 bindsym $mod+Control+Shift+M exec pactl set-card-profile bluez_card.88_C9_E8_26_9E_51 off
 
 # ScreenShot
@@ -272,6 +271,9 @@ bindsym $Mod+i exec rofimoji
 
 # Emacs everywhere
 bindsym $mod+Shift+i exec emacsclient --eval "(emacs-everywhere)"
+
+# Calc
+bindsym $mod+c exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort -automatic-save-to-history -calc-command "echo -n '{result}' | xclip -selection clipboard"
 
 # Bar
 bindsym $mod+Shift+t bar mode toggle
